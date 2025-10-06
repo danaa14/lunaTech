@@ -13,7 +13,12 @@ const Footer = () => {
                 </div>
                 
                 <div>
-
+                    <p>Socials</p>
+                    <ul>
+                        <li><a href="https://www.instagram.com/accounts/login/?hl=en" target="blank"><img src="/insta.png" alt="Instagram" /></a></li>
+                        <li><a href="https://www.facebook.com/" target="blank"><img src="/facebook.png" alt="Facebook" /></a></li>
+                        <li><a href="https://www.tiktok.com/en/" target="blank"><img src="/tiktok.png" alt="TikTok" /></a></li>
+                    </ul>
                 </div>
             </article>
             <h2>Luna Tech</h2>
