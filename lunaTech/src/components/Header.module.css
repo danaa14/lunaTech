@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Exo:ital,wght@0,100..900;1,100..900&family=Funnel+Display:wght@300..800&family=Kolker+Brush&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Wittgenstein:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Funnel+Display:wght@300..800&family=Kolker+Brush&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Wittgenstein:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap');
+.topBar{
+    background-color:#A7ECF3;
+    color: #011C40;
+    font-family: 'Exo', sans-serif;
+    padding:0;
+    font-size: 14px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.header {
+    background-color: #023859;
+    color: #E2F1F3;
+    position: fixed;
+    top:0;
+    left:0; 
+    width: 100%;
+    max-width: 1920px;
+    height:210px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0px 100px 0px 100px;
+
+    box-sizing: border-box;
+    z-index: 1000;
+}
+.header h1{
+    font-size: 48px;
+    margin:0;
+    padding: 16px 8px;
+    font-family: 'Oxanium', sans-serif;
+}

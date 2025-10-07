@@ -1,0 +1,13 @@
+ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    color: #E2F1F3;
+}
+li{
+    list-style: none;
+    
+
+}
