@@ -1,13 +1,14 @@
 import {Link} from 'react-router-dom'   
-
+import styles from './Header.module.css'
 
 const Header = () => {
 
     return (
-
-            <header>
+        <section>
+        <div className = {styles.topbar}></div>
+            <header className ={styles.header}>
                 <h1>Luna Tech</h1>
-                <nav>
+                <nav className ={styles.links}>
                     <ul>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/products">Products</Link></li>
@@ -15,9 +16,10 @@ const Header = () => {
                         <li><Link to="/contacts">Contacts</Link></li>
                     </ul>
                 </nav>
-                <a href="#"><img src="/search.png" alt="Search" /></a>
-                <a href="#"><img src="/cart.png" alt="Cart" /></a>
-            </header>
+                <div className={styles.cart_search}>
+                <a href="#" ><img src="/search.png" alt="Search" /></a>
+                <a href="#" ><img src="/cart.png" alt="Cart" /></a></div>
+            </header></section>
     )
 }
 
