@@ -1,4 +1,6 @@
 import Layout from "../layouts/Layout";
+import Products from "../components/Products.tsx";
+import AboutUs from "../components/AboutUs.tsx";
 
 const Home = () => {
     return (
@@ -9,6 +11,11 @@ const Home = () => {
                 <button>Shop now</button>
             </section>
             <img src="/image.png" alt="Image" />
+
+            <h3>Popular Products</h3>
+            <Products />
+            <button>See more</button>
+            <AboutUs />
         </Layout>
     )
 }

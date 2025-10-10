@@ -1,6 +1,5 @@
 import {Link} from 'react-router-dom'   
 
-
 const Header = () => {
 
     return (
@@ -16,7 +15,7 @@ const Header = () => {
                     </ul>
                 </nav>
                 <a href="#"><img src="/search.png" alt="Search" /></a>
-                <a href="#"><img src="/cart.png" alt="Cart" /></a>
+                <Link to='/cart'><img src="/cart.png" alt="Cart" /></Link>
             </header>
     )
 }
