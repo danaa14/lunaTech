@@ -1,5 +1,7 @@
 import {Link} from 'react-router-dom'   
+
 import styles from './Header.module.css'
+
 
 const Header = () => {
 
@@ -16,10 +18,13 @@ const Header = () => {
                         <li><Link to="/contacts">Contacts</Link></li>
                     </ul>
                 </nav>
+
                 <div className={styles.cart_search}>
                 <a href="#" ><img src="/search.png" alt="Search" /></a>
-                <a href="#" ><img src="/cart.png" alt="Cart" /></a></div>
-            </header></section>
+                <a href="/cart" ><img src="/cart.png" alt="Cart" /></a></div>
+            </header>
+      </section>
+
     )
 }
 

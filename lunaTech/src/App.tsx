@@ -1,19 +1,22 @@
-
-import Products from "./pages/Products.tsx";
-import AboutUs from "./pages/AboutUs";
+import Cart from "./Cart.tsx";
 import Contacts from "./pages/Contacts";
 import './App.css'
 import {Route, Routes} from 'react-router-dom'
 import Home from "./pages/Home.tsx";
+import ProductPage from "./pages/ProductPage.tsx";
+import ProductsPage from "./pages/ProductsPage.tsx";
+import AboutUsPage from "./pages/AboutUsPage.tsx";
 
 function App() {
   
   return (
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/about" element={<AboutUs />} />
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/aboutus" element={<AboutUsPage />} />
             <Route path="/contacts" element={<Contacts />} />
+            <Route path='/cart' element={<Cart />}/>
+            <Route path="/productpage/:id" element={<ProductPage />}/>
           </Routes>
   )
 }
