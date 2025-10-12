@@ -1,21 +1,16 @@
-import { databases } from "../db/appwritedb.js";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import type { ProductType } from "../types/ProductType";
 
-const Product = () => {
+interface ProductProps {
+    product: ProductType;
+}
 
-    async function getCollections() {
-        const docs = await databases.listDocuments('68e6a9cc000999e421ca', 'products');
-        console.log(docs);
-    }
-
-    useEffect(() => {
-        getCollections();
-    }, []);
+const Product = ({product}: ProductProps) => {
 
     return (
         <div>
-            <img src="" alt="Image" />
-            <p></p>
+            <Link to={`/productpage/${product.$id}`}><img src={product.image} alt="Product Image" /></Link>
+            <h3>{ product.name }</h3>
         </div>
     )
 }
