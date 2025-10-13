@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Exo:ital,wght@0,100..900;1,100..900&family=Funnel+Display:wght@300..800&family=Kolker+Brush&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Wittgenstein:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Funnel+Display:wght@300..800&family=Kolker+Brush&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Wittgenstein:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap');
+
+.footer{
+    background: linear-gradient(180deg, #26668C 0%, #0A1C26 100%);
+    color: #E2F1F3;
+    text-align: center;
+    padding: 60px 100px;
+    position: relative;
+    min-height: 400px;
+    align-items: center;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+.footer article{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+ .footer h2{
+  position: relative;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  font-size: 5rem;
+  font-family: 'Oxanium', sans-serif;
+  color: #E2F1F3;
+  margin: 0;
+  white-space: nowrap;
+  padding-bottom: 50px;
+  }
+
+.footer article > div{
+    flex:1;
+    min-width: 0;
+}
+
+  .footer article ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer article li {
+    font-size: 0.9rem;
+    margin: 3px 0;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-family:'Exo', sans-serif;
+    color: #E2F1F3;
+  }
+
+  /*left side*/
+
+.footer article div:first-child {
+    text-align: left;
+}
+
+.footer article div:first-child p {
+    font-size: 2rem;
+    font-family:'Exo', sans-serif;
+    color: #E2F1F3;
+    margin-bottom: 6px;
+  }
+  
+  /*right side*/
+
+  .footer article div:last-child{
+    text-align: right;
+  }
+
+  .footer article div:last-child p {
+    font-size: 2rem;
+    font-family:'Exo', sans-serif;
+    color: #E2F1F3;
+    margin-bottom: 6px;
+  }
+
+  .footer article div:last-child ul {
+    display:flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+    
+  }
+
+  .footer article div:last-child li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    
+  }
+
+  .footer ul li a img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: 0 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .footer article div:last-child img{
+    transition: trandsform 0.3s ease, filter 0.3s ease;
+  }
+
+  .footer article div:last-child img:hover{
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    cursor: pointer;
+  }
+
+  .footer-bottom {
+    font-size: 0.9rem;
+    color: #a7ecf3;
+    text-align: center;
+    margin-top: 30px;
+}
+@media (max-width: 1024px) {
+  .footer {
+    padding: 50px 60px;
+  }
+
+  .footer h2 {
+    font-size: 3.5rem;
+    padding-bottom: 30px;
+  }
+
+  .footer article div:first-child p,
+  .footer article div:last-child p {
+    font-size: 1.6rem;
+  }
+
+  .footer article li {
+    font-size: 1.1rem;
+  }
+
+  .footer ul li a img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 30px;
+  }
+
+  .footer article {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer article div:first-child,
+  .footer article div:last-child {
+    text-align: center;
+  }
+
+  .footer h2 {
+    font-size: 3rem;
+  }
+
+  .footer ul li a img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 20px;
+  }
+
+  .footer h2 {
+    font-size: 2.2rem;
+    padding-bottom: 20px;
+  }
+
+  .footer article div:first-child p,
+  .footer article div:last-child p {
+    font-size: 1.3rem;
+  }
+
+  .footer article li {
+    font-size: 1rem;
+  }
+
+  .footer ul li a img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}

@@ -10,7 +10,7 @@ const Home = () => {
                 <h2>Shop for equality and quantity at reasoanble prices</h2>
                 <button>Shop now</button>
             </section>
-            <img src="/image.png" alt="Image" />
+            <img src="/image 1.png" alt="Image" />
 
             <h3>Popular Products</h3>
             <Products />
