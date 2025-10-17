@@ -5,7 +5,10 @@ const AboutUsPage = () => {
     return(
          <Layout>
             <h1>About Us</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam odio exercitationem sequi aspernatur iusto, obcaecati nihil commodi, numquam dolorum reprehenderit fuga veritatis earum in, sint repellat eaque ducimus aperiam? Suscipit!</p>
+            <p>At Luna Tech, we believe great technology should look as good as it performs.
+From high-performance laptops to the latest accessories, we handpick everything for quality, durability, and modern design.
+
+Our mission? To help you power through every project, every game, and every day with confidence.</p>
         </Layout>
     )
 }

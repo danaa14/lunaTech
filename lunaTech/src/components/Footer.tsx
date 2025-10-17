@@ -3,10 +3,6 @@ const Footer = () => {
 
     return (
         <footer className={styles.footer}>
-            <div className="footer-lines">
-            <div></div>
-            <div></div>
-</div>
             <article>
                 <div>
                     <p>Contacts:</p>
@@ -16,17 +12,18 @@ const Footer = () => {
                         <li>lunatech@gmail.com</li>
                     </ul>
                 </div>
-                
+                <h2>LunaTech</h2>
                 <div>
                     <p>Socials</p>
                     <ul>
-                        <li><a href="https://www.instagram.com/accounts/login/?hl=en" target="blank"><img src="/insta.png" alt="Instagram" /></a></li>
-                        <li><a href="https://www.facebook.com/" target="blank"><img src="/facebook.png" alt="Facebook" /></a></li>
-                        <li><a href="https://www.tiktok.com/en/" target="blank"><img src="/tiktok.png" alt="TikTok" /></a></li>
+                        <li className='insta'><a href="https://www.instagram.com/accounts/login/?hl=en" target="blank"><img src="/insta.png" alt="Instagram" /></a></li>
+                        <li className='facebook'><a href="https://www.facebook.com/" target="blank"><img src="/facebook.png" alt="Facebook" /></a></li>
+                        <li className='tiktok'><a href="https://www.tiktok.com/en/" target="blank"><img src="/tiktok.png" alt="TikTok" /></a></li>
                     </ul>
                 </div>
+                
             </article>
-            <h2>Luna Tech</h2>
+           
             <p className="footer-bottom">© 2025 Luna Tech. All rights reserved.</p>
         </footer>
     )

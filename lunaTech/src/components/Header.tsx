@@ -9,7 +9,7 @@ const Header = () => {
         <section>
         <div className = {styles.topbar}></div>
             <header className ={styles.header}>
-                <h1>Luna Tech</h1>
+                <h1>LunaTech</h1>
                 <nav className ={styles.links}>
                     <ul>
                         <li><Link to="/">Home</Link></li>
@@ -19,9 +19,10 @@ const Header = () => {
                     </ul>
                 </nav>
 
-                <div className={styles.cart_search}>
-                <a href="#" ><img src="/search.png" alt="Search" /></a>
-                <a href="/cart" ><img src="/cart.png" alt="Cart" /></a></div>
+               <div className={styles.cart_search}>
+                    <a href="#"><img src="/search.png" alt="Search" className={styles.searchIcon} /></a>
+                    <a href="/cart"><img src="/cart.png" alt="Cart" className={styles.cartIcon} /></a>
+               </div>
             </header>
       </section>
 
