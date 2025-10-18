@@ -2,6 +2,7 @@ import Product from "./Product";
 import { useEffect, useState } from "react";
 import { getCollections } from "../db/appwritedb";
 import type { ProductType } from "../types/ProductType";
+import styles from "./Products.module.css"
 
 const Products = () => {
     const [products, setProducts] = useState<ProductType[]>([]);
@@ -22,7 +23,7 @@ const Products = () => {
             {loading ? (
                 <p>Loading...</p>
             ) : products.length > 0 ? (
-            <div className="product-grid">
+            <div className={styles.grid}>
                 {products.map((p) => (
                 <Product key={p.$id} product={p} />
                 ))}

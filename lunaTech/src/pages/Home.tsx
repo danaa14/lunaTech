@@ -23,6 +23,8 @@ const Home = () => {
             <h3>Popular Products</h3>
             <Products />
             <button>See more</button>
+            </section>
+            <section className={styles.section3}>
             <AboutUs />
             </section>
             </section>
