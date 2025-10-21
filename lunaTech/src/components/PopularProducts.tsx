@@ -1,13 +1,12 @@
-import Product from "./Product";
+import Product from "../components/Product";
 import { useEffect, useState } from "react";
 import { getCollections } from "../db/appwritedb";
 import type { ProductType } from "../types/ProductType";
 import styles from "./Products.module.css"
 import { useParams } from "react-router-dom";
-import Layout from "../layouts/Layout";
 
-const Products = () => {
-    const { category } = useParams();
+const PopularProducts = () => {
+    const { popular } = useParams();
     const [products, setProducts] = useState<ProductType[]>([]);
     const [loading, setLoading] = useState(true);
 
@@ -15,17 +14,17 @@ const Products = () => {
     async function fetchProducts() {
       const data = await getCollections();
       const filtered = data.products.filter(
-        (p: ProductType) => p.category === category
+        (p: ProductType) => p.popular === true
       );
       setProducts(filtered);
       setLoading(false);
     }
 
     fetchProducts();
-    }, [category]);
+    }, [popular]);
 
     return(
-        <Layout>
+        <>
             {loading ? (
                 <p>Loading...</p>
             ) : products.length > 0 ? (
@@ -37,7 +36,7 @@ const Products = () => {
             ) : (
                 <p>No products available.</p>
             )}
-        </Layout>
+        </>
     )
 }
-export default Products;
+export default PopularProducts;

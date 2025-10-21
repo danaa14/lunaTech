@@ -6,4 +6,5 @@ export interface ProductType {
   description?: string;
   category?: string;
   stock?: boolean;
+  popular?: boolean;
 }

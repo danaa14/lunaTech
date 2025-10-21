@@ -10,11 +10,12 @@ const Product = ({product}: ProductProps) => {
 
     return (
         <div className={styles.container}>
-         <div className={styles.img}>
-            <Link to={`/productpage/${product.$id}`}>
-                <img src={product.image} alt="Product Image" />
-                <h4>{ product.name }</h4>
-            </Link>
+            <div className={styles.img}>
+                <Link to={`/productpage/${product.$id}`}>
+                    <img src={product.image} alt="Product Image" />
+                    <h4>{ product.name }</h4>
+                </Link>
+            </div>
         </div>
     )
 }
