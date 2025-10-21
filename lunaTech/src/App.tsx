@@ -6,6 +6,7 @@ import Home from "./pages/Home.tsx";
 import ProductPage from "./pages/ProductPage.tsx";
 import ProductsPage from "./pages/ProductsPage.tsx";
 import AboutUsPage from "./pages/AboutUsPage.tsx";
+import Products from "./components/Products.tsx";
 
 function App() {
   
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<ProductsPage />} />
+            <Route path="/products/:category" element={<Products />}/>
             <Route path="/aboutus" element={<AboutUsPage />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path='/cart' element={<Cart />}/>

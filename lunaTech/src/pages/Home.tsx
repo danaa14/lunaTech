@@ -2,6 +2,7 @@ import Layout from "../layouts/Layout";
 import Products from "../components/Products.tsx";
 import AboutUs from "../components/AboutUs.tsx";
 import styles from "./Home.module.css"
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
@@ -22,7 +23,7 @@ const Home = () => {
             <section className={styles.section2}>
             <h3>Popular Products</h3>
             <Products />
-            <button>See more</button>
+            <Link to="/products"><button>See more</button></Link>
             <AboutUs />
             </section>
             </section>
