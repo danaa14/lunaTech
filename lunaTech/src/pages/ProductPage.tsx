@@ -1,11 +1,13 @@
 import Layout from "../layouts/Layout";
-import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { databases } from "../db/appwritedb";
+import { useNavigate } from "react-router-dom";
 
 
 const ProductPage = () => {
+
+    const navigate = useNavigate();
 
     const { id } = useParams();
     const [product, setProduct] = useState<any>(null);
@@ -23,7 +25,9 @@ const ProductPage = () => {
     
     return (
         <Layout>
-            <Link to="/productspage"><img src="/backarrow.png" alt="Back" /></Link>
+            <button  onClick={() => navigate(-1)}>
+                <img src="/backarrow.png" alt="Back" />
+            </button>
             <article>
                 <div><img src={product.image} alt="Product Image" /></div>
                 <section>

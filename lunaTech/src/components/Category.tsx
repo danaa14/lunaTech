@@ -7,7 +7,7 @@ interface CategoryProps {
 
 const Category = ({category}: CategoryProps) => {
     return (
-        <Link to="/products/">
+        <Link to={`/products/${category.name}`}>
             <section>
                 <img src={category.image} alt="Category" />
             </section>
