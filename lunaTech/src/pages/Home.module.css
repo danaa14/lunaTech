@@ -4,6 +4,7 @@
   align-items: center;
 }
 
+/*Start fisrt section*/
 .line{
     width: 100vw;
     margin-left: calc(-50vw + 50%);
@@ -58,8 +59,24 @@
 }
 
 .section1 img{
-   width: 1200px;
+  width: 90rem;
   height: auto;
   object-fit: contain;
   padding: 0 100px;
+}
+
+/*First section done*/
+.section2 {
+   width: 100vw;
+   padding: 64px 48px;
+   min-height: 100vh;
+}
+
+.section2 h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin-bottom: 48px;
+    font-family: 'Exo', sans-serif;
 }
