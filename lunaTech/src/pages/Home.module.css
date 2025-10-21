@@ -66,6 +66,8 @@
 }
 
 /*First section done*/
+
+/*Start second section*/
 .section2 {
    width: 100vw;
    padding: 64px 48px;
@@ -78,5 +80,37 @@
     text-align: center;
     color: white;
     margin-bottom: 48px;
+    font-family: 'Exo', sans-serif;
+}
+.section2 button{
+  width: 250px;
+  height: 70px;
+  font-size: 36px;
+  border-radius: 16px;
+  margin-top: 120px;
+  background-color: #A7ECF3;
+  font-family: 'exo', sans-serif;
+}
+
+/*Second section done*/
+
+/*Start third section*/
+.section3 {
+  width: 100vw;
+}
+.section3 h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin-bottom: 48px;
+    font-family: 'Exo', sans-serif;
+} 
+.section3 p {
+    font-size: 2rem;
+    line-height: 1.6;
+    color: white;
+    max-width: 800px;
+    text-align: center;
     font-family: 'Exo', sans-serif;
 }
