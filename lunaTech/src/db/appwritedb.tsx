@@ -10,11 +10,13 @@ export async function getCollections() {
     try{
         const  productSnapshot = await databases.listDocuments('68e6a9cc000999e421ca', 'products');
         const productList = productSnapshot.documents;
+        const categorySnapshot = await databases.listDocuments('68e6a9cc000999e421ca', 'categories')
+        const categoryList = categorySnapshot.documents;
 
-        return productList;
+        return { products: productList, categories: categoryList };
     }
     catch (error) {
         console.error('Failed to fetch collections:', error)
-        return []
+        return { products: [], categories: [] };
     }
     };

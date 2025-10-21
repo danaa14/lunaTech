@@ -1,9 +1,8 @@
-export interface ProductType {
+export interface CategoryType {
   $id: string;
   name: string;
-  price?: number;
+  productid?: [string];
   image?: string;
   description?: string;
   category?: string;
-  stock?: boolean;
 }

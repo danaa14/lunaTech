@@ -11,7 +11,7 @@ const Products = () => {
     useEffect(() => {
     async function fetchProducts() {
       const data = await getCollections();
-      setProducts(data);
+      setProducts(data.products);
       setLoading(false);
     }
 
