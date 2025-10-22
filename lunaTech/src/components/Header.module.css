@@ -45,7 +45,7 @@
     flex-wrap: wrap;
 }
 .links li a{
-    font-size: 300%;
+    font-size: 2.4rem;
     font-weight:500;
     font-family: 'Exo', sans-serif; 
     cursor: pointer;

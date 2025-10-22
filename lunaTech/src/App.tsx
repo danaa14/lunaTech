@@ -1,5 +1,4 @@
 import Cart from "./Cart.tsx";
-import Contacts from "./pages/Contacts";
 import './App.css'
 import {Route, Routes} from 'react-router-dom'
 import Home from "./pages/Home.tsx";
@@ -16,7 +15,6 @@ function App() {
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/products/:category" element={<Products />}/>
             <Route path="/aboutus" element={<AboutUsPage />} />
-            <Route path="/contacts" element={<Contacts />} />
             <Route path='/cart' element={<Cart />}/>
             <Route path="/productpage/:id" element={<ProductPage />}/>
           </Routes>
