@@ -6,6 +6,7 @@
 
 /*Start fisrt section*/
 .line{
+  margin-top: 20rem;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     border: none;
@@ -18,22 +19,22 @@
     justify-content: center;
     align-items: center;
     text-align:center;
-    height: 100vh;
+    padding-top: 2em;
     width: 100vw;
     background: linear-gradient(180deg, #26668C 0%, #0A1C26 100%);
-    gap: 50px;
 }
+
 .section1 .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 50%;
-  padding: 0 100px;
+  padding: 5rem 2rem 0 7rem;
 }
 
 .section1 h1{
-    font-size: 7rem;
+    font-size: 6rem;
     font-family: 'Oxanium', sans-serif;
     margin-bottom: 6rem;
     margin-top: 0;
@@ -41,9 +42,8 @@
 }
 
 .section1 h2{
-    font-size: 4rem;
+    font-size: 3rem;
     margin-top: 0;
-    margin-bottom: 10rem;
     font-family: 'Exo', sans-serif;
     color: white;
 }
@@ -62,7 +62,8 @@
   width: 90rem;
   height: auto;
   object-fit: contain;
-  padding: 0 100px;
+  padding: 0 2rem;
+  padding-right: 7rem;
 }
 
 /*First section done*/
@@ -75,7 +76,7 @@
 }
 
 .section2 h3 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     text-align: center;
     color: white;
@@ -97,9 +98,15 @@
 /*Start third section*/
 .section3 {
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 10rem 0;
 }
+
 .section3 h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: bold;
     text-align: center;
     color: white;
@@ -107,6 +114,7 @@
     font-family: 'Exo', sans-serif;
 } 
 .section3 p {
+    text-align: center;
     font-size: 2rem;
     line-height: 1.6;
     color: white;

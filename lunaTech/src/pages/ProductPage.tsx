@@ -33,16 +33,24 @@ const ProductPage = () => {
                 <section>
                     <h2>{product.name}</h2>
                     <p>Preț:{product.price} MDL</p>
-                    <p>{product.description}</p>
                     <div>
-                        <button></button>
-                        <button></button>
+                        <div>
+                            <p>Color Available: </p>
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div>
+                             <p>Availability:</p>
+                             <p>{product.stock}</p>
+                        </div>
+                        <button>Add to Your Cart</button>
                     </div>
-                    
                 </section>
             </article>
             <article>
-
+                <h4>Details:</h4>
+                <p>{product.description}</p>
             </article>
         </Layout>
     )
