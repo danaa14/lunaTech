@@ -20,8 +20,8 @@
 }
 
 .container img {
-    max-height: 30rem;
-    max-width: 36rem;
+    max-height: 20rem;
+    max-width: 26rem;
     object-fit: contain;
 }
 
@@ -33,4 +33,5 @@
     font-family: 'Exo', sans-serif;
     width: 100%;
     margin: 0;
+    text-decoration: none;
 }

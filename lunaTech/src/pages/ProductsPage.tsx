@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout"
 import { useState, useEffect } from "react";
 import { getCollections } from "../db/appwritedb";
 import type { CategoryType } from "../types/CategoryType";
-
+import styles from "./productspage.module.css"
 const ProductsPage = () => {
         const [categories, setCategory] = useState<CategoryType[]>([]);
         const [loading, setLoading] = useState(true);
@@ -20,11 +20,11 @@ const ProductsPage = () => {
 
     return (
         <Layout>
-            <h1>Our Products</h1>
+            <h1 className={styles.title}>Our Products</h1>
             {loading ? (
-                <p>Loading...</p>
+                <p className={styles.loading}>Loading...</p>
             ) : categories.length > 0 ? (
-            <div className="category-grid">
+            <div className={styles.grid} >
                 {categories.map((c) => (
                 <Category key={c.$id} category={c} />
                 ))}

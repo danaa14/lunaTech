@@ -32,7 +32,7 @@ const ProductPage = () => {
                 <div><img src={product.image} alt="Product Image" /></div>
                 <section>
                     <h2>{product.name}</h2>
-                    <p>Preț:{product.price} MDL</p>
+                    <p>Price:{product.price} MDL</p>
                     <div>
                         <div>
                             <p>Color Available: </p>
