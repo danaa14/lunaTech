@@ -114,3 +114,182 @@
     text-align: center;
     font-family: 'Exo', sans-serif;
 }
+
+@media (max-width: 1024px) {
+  .section1 {
+    flex-direction: row;
+    height: auto;
+    padding: 50px 0;
+  }
+
+  .section1 .text {
+    max-width: 90%;
+    padding: 0 20px;
+  }
+
+  .section1 h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .section1 h2 {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .section1 button {
+    padding: 0 20px;
+    width: fit-content;
+    height: 35px;
+    font-size: 20px;
+    margin-top: 25px;
+  }
+
+  .section1 img {
+    width: 50%;
+    padding: 0 20px;
+  }
+
+  .section2 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  } 
+  .section2 button {
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    margin-top: 60px;
+  }
+  .section3 h1 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+  .section3 p {
+    font-size: 1rem;
+    max-width: 90%; 
+    padding: 0 20px;
+  }
+
+  @media (max-width: 768px) {
+  .section1 {
+    flex-direction: row;
+    text-align: center;
+    height: auto;
+    gap: 30px;
+    padding: 40px 0;
+  }
+
+  .section1 .text {
+    max-width: 70%;
+    padding: 0 20px;
+  }
+
+  .section1 h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section1 h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .section1 button {
+    width: 160px;
+    height: 30px;
+    font-size: 10px;
+    margin-top: 40px;
+  }
+
+  .section1 img {
+    width: 40%;
+    padding: 0;
+  }
+
+  .section2 {
+    padding: 40px 20px;
+  }
+
+  .section2 h3 {
+    font-size: 1.4rem;
+  }
+
+  .section2 button {
+    width: 60px;
+    height: 20px;
+    font-size: 10px;
+    margin-top: 60px;
+  }
+
+  .section3 h1 {
+    font-size: 2rem;
+  }
+
+  .section3 p {
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+}
+  
+}
+@media (max-width: 428px) {
+  .section1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 30px 10px;
+  }
+
+  .section1 .text {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .section1 h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .section1 h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section1 button {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .section1 img {
+    width: 90%;
+    padding: 0;
+  }
+
+  .section2 {
+    padding: 20px 10px;
+  }
+
+  .section2 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .section2 button {
+    width: 160px;
+    height: 45px;
+    font-size: 16px;
+    margin-top: 40px;
+  }
+
+  .section3 h1 {
+    font-size: 1.5rem;
+  }
+
+  .section3 p {
+    font-size: 1rem;
+    max-width: 95%;
+  }
+}

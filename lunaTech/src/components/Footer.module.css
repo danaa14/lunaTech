@@ -128,7 +128,7 @@ body, html {
 }
 
 .footer-bottom {
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   color: #a7ecf3;
   text-align: center;
   margin-top: 30px;
@@ -141,7 +141,7 @@ body, html {
   }
 
   .footer h2 {
-    font-size: 3.8rem;
+    font-size: 3rem;
     padding-bottom: 35px;
   }
 
@@ -168,23 +168,25 @@ body, html {
 /* ✅ Mobile (up to 768px) */
 @media (max-width: 768px) {
   .footer {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    min-height: fit-content;
     padding: 15px 20px;
     text-align: center;
   }
 
   .footer h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding-bottom: 25px;
   }
 
   .footer article {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
-    gap: 35px;
+    gap: 1rem;
   }
 
   .footer article div:first-child,
@@ -194,20 +196,21 @@ body, html {
 
   .footer article div:first-child p,
   .footer article div:last-child p {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
   }
 
   .footer article li {
-    font-size: 1.1rem;
+    font-size: 0.7rem;
   }
 
   .footer ul li a img {
-    width: 45px;
-    height: 45px;
+    width: 2rem;
+    height: 2rem;
   }
 
   .footer-bottom {
     font-size: 0.85rem;
+    text-align: center;
   }
 }
 
@@ -218,7 +221,7 @@ body, html {
   }
 
   .footer h2 {
-    font-size: 2.3rem;
+    font-size: 2rem;
     padding-bottom: 20px;
   }
 
