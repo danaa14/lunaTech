@@ -48,16 +48,6 @@
     color: white;
 }
 
-.section1 button{
-    width: 350px;
-    height: 100px;
-    margin-top:105px;
-    font-size: 40px;
-    border-radius: 30px;
-    background-color: #A7ECF3;
-    font-family: 'exo', sans-serif;
-}
-
 .section1 img{
   width: 90rem;
   height: auto;
