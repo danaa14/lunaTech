@@ -30,7 +30,8 @@ const ProductPage = () => {
                 <img src="/backarrow.png" alt="Back" />
             </button>
             <article>
-                <div className={styles.img}><img src={product.image} alt="Product Image" /></div>
+                <div className={styles.img}>
+                <img src={product.image} alt="Product Image" /></div>
                 <section className={styles.infocard}>
                     <h2>{product.name}</h2>
                     <p>Price:{product.price} EURO</p>

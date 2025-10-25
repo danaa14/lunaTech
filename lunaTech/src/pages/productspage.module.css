@@ -9,3 +9,10 @@
   grid-template-columns: 1fr;    
   gap: clamp(20px, 3vw, 48px);
 }
+ 
+.loading{
+    text-align: center;
+    font-size: 2rem;
+    color: white ;
+    font-family: 'oxanium', sans-serif;
+}
