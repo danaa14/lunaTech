@@ -1,7 +1,6 @@
 import {Link} from 'react-router-dom'   
-
 import styles from './Header.module.css'
-
+import SearchBar from './SearchBar'
 
 const Header = () => {
 
@@ -19,8 +18,8 @@ const Header = () => {
                 </nav>
 
                <div className={styles.cart_search}>
-                    <a href="#"><img src="/search.png" alt="Search" className={styles.searchIcon} /></a>
-                    <a href="/cart"><img src="/cart.png" alt="Cart" className={styles.cartIcon} /></a>
+                    <SearchBar />
+                    <Link to="/cart"><img src="/cart.png" alt="Cart" className={styles.cartIcon} /></Link>
                </div>
             </header>
       </section>
