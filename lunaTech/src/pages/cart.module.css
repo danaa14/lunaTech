@@ -1,0 +1,13 @@
+.backbutton{
+    display: flex;
+    margin: 100px;
+    background: none !important;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    text-shadow: none;
+    filter: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}

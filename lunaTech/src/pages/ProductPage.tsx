@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { databases } from "../db/appwritedb";
 import { useNavigate } from "react-router-dom";
+import styles from "./productpage.module.css"
 
 
 const ProductPage = () => {
@@ -25,14 +26,14 @@ const ProductPage = () => {
     
     return (
         <Layout>
-            <button  onClick={() => navigate(-1)}>
+            <button  onClick={() => navigate(-1)} className={styles.backbutton}>
                 <img src="/backarrow.png" alt="Back" />
             </button>
             <article>
-                <div><img src={product.image} alt="Product Image" /></div>
-                <section>
+                <div className={styles.img}><img src={product.image} alt="Product Image" /></div>
+                <section className={styles.infocard}>
                     <h2>{product.name}</h2>
-                    <p>Preț:{product.price} MDL</p>
+                    <p>Price:{product.price} EURO</p>
                     <div>
                         <div>
                             <p>Color Available: </p>

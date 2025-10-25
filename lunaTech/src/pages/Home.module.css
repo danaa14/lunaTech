@@ -19,7 +19,7 @@
     justify-content: center;
     align-items: center;
     text-align:center;
-    padding-top: 2em;
+    padding-top: 2rem;
     width: 100vw;
     background: linear-gradient(180deg, #26668C 0%, #0A1C26 100%);
 }

@@ -12,7 +12,6 @@ const Home = () => {
                   <div className={styles.text}>
                   <h1>Our products extend the limits of technology</h1>
                   <h2>Shop for equality and quantity at reasoanble prices</h2>
-                  <button>Chat with Luna</button>
                   </div>
                   <img src="/image 1.png" alt="Image" />
               </div>

@@ -1,12 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import Layout from "../layouts/Layout";
+import styles from "./cart.module.css"
 
 const Cart = () => {
     const navigate = useNavigate();
 
     return (
         <Layout>
-            <button  onClick={() => navigate(-1)}>
+            <button  onClick={() => navigate(-1)} className={styles.backbutton}>
                 <img src="/backarrow.png" alt="Back" />
             </button>
 
