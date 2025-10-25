@@ -11,9 +11,11 @@
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+
 .img {
     padding: 5rem;
     max-width: fit-content;
     background-color: #E2F1F3;
     border-radius: 30px;
 }
+

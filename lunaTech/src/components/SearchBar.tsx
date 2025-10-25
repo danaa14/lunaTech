@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import type { ProductType } from "../types/ProductType";
 import { getCollections } from "../db/appwritedb";
-import styles from './searchBar.module.css'
+import styles from './Header.module.css'
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
