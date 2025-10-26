@@ -4,9 +4,12 @@ import { getCollections } from "../db/appwritedb";
 import type { ProductType } from "../types/ProductType";
 import styles from "./Products.module.css"
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Layout from "../layouts/Layout";
 
 const Products = () => {
+     const navigate = useNavigate();
+     
     const { category } = useParams();
     const [products, setProducts] = useState<ProductType[]>([]);
     const [loading, setLoading] = useState(true);
