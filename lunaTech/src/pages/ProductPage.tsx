@@ -29,28 +29,25 @@ const ProductPage = () => {
             <button  onClick={() => navigate(-1)} className={styles.backbutton}>
                 <img src="/backarrow.png" alt="Back" />
             </button>
-            <article>
+            <article className={styles.container}>
                 <div className={styles.img}>
                 <img src={product.image} alt="Product Image" /></div>
                 <section className={styles.infocard}>
                     <h2>{product.name}</h2>
+
                     <p>Price:{product.price} €</p>
-                    <div>
+                    <div className={styles.card}>
+
                         <div>
-                            <p>Color Available: </p>
-                            <ul>
-                                <li></li>
-                            </ul>
+                             <p>Availability: {product.stock}</p>
+
+                             <p className={styles.deivery}><img src="../delivery.png" alt="Delivery" className={styles.delivery}/> Delivery: In 10-20 working days</p>
                         </div>
-                        <div>
-                             <p>Availability:</p>
-                             <p>{product.stock}</p>
-                        </div>
-                        <button>Add to Your Cart</button>
+                        <button >Add to Your Cart</button>
                     </div>
                 </section>
             </article>
-            <article>
+            <article className={styles.detail}>
                 <h4>Details:</h4>
                 <p>{product.description}</p>
             </article>

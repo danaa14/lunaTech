@@ -10,4 +10,11 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    cursor: pointer;
+}
+
+.title{
+    font-size: 3rem;
+    font-family: 'oxanium', sans-serif;
+    color: white;
 }

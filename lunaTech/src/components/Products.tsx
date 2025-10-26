@@ -4,9 +4,12 @@ import { getCollections } from "../db/appwritedb";
 import type { ProductType } from "../types/ProductType";
 import styles from "./Products.module.css"
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Layout from "../layouts/Layout";
 
 const Products = () => {
+     const navigate = useNavigate();
+     
     const { category } = useParams();
     const [products, setProducts] = useState<ProductType[]>([]);
     const [loading, setLoading] = useState(true);
@@ -24,16 +27,22 @@ const Products = () => {
     fetchProducts();
     }, [category]);
 
-    return(
-        <Layout>
+    return( 
+    <Layout>
+        <button  onClick={() => navigate(-1)} className={styles.backbutton}>
+                <img src="/backarrow.png" alt="Back" />
+            </button>
+       
             {loading ? (
                 <p>Loading...</p>
             ) : products.length > 0 ? (
+            <section className={styles.container}>
             <div className={styles.grid}>
                 {products.map((p) => (
                 <Product key={p.$id} product={p} />
                 ))}
             </div>
+            </section>
             ) : (
                 <p>No products available.</p>
             )}
