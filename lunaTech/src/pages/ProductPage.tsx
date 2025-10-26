@@ -34,7 +34,7 @@ const ProductPage = () => {
                 <img src={product.image} alt="Product Image" /></div>
                 <section className={styles.infocard}>
                     <h2>{product.name}</h2>
-                    <p>Price:{product.price} EURO</p>
+                    <p>Price:{product.price} €</p>
                     <div>
                         <div>
                             <p>Color Available: </p>
