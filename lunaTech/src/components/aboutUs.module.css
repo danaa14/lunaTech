@@ -1,19 +1,19 @@
 .aboutUs h1{
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 5vw, 3rem);
     font-weight: bold;
     text-align: center;
     color: white;
-    margin-bottom: 48px;
-    margin-top: 40px;
+    margin-bottom: clamp(24px, 4vw, 48px);
+    margin-top: clamp(20px, 3vw, 40px);
     font-family: 'Exo', sans-serif;
 }
 .aboutUs p{
      text-align: center;
-    font-size: 2rem;
+    font-size: clamp(1rem, 2.5vw, 2rem);
     line-height: 1.6;
     color: white;
     max-width: 100%;
-    padding: 0 10rem;
+    padding: 0 clamp(1rem, 4vw, 10rem);
     text-align: center;
     font-family: 'Exo', sans-serif;
 }
@@ -25,7 +25,7 @@
   width: min(1100px, 92vw);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: clamp(28px, 6vw, 100px);
   justify-items: center;
   align-items: start;
@@ -38,28 +38,28 @@
 }
 
 .frame {
-  border: 14px solid #cfefff;
-  border-radius: 18px;
+  border: clamp(8px, 2vw, 14px) solid #cfefff;
+  border-radius: clamp(12px, 2vw, 18px);
   display: inline-flex;
   overflow: hidden;
 }
 
 .photo {
-  width: 260px;
-  height: 220px;
+  width: clamp(200px, 60vw, 260px);
+  height: clamp(180px, 55vw, 220px);
   object-fit: cover;
   display: block;
 }
 
 .roles {
   list-style: none;
-  margin: 16px 0 0;
+  margin: clamp(12px, 2vw, 16px) 0 0;
   padding: 0;
   line-height: 1.35;
 }
 
 .roles li {
-  font-size: 14px;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
   opacity: 0.95;
 }
 
@@ -81,7 +81,7 @@
   width: min(1100px, 92vw);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
   gap: clamp(24px, 6vw, 80px);
 }
 
@@ -104,61 +104,80 @@
 
 @media (max-width: 1024px) {
     .aboutUs h1{
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     }
 
     .aboutUs p{
-    padding: 0 4rem;
-    font-size:1rem;
+    padding: 0 clamp(2rem, 3vw, 4rem);
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
     }
 
     .photo {
-    width: 200px;
-    height: 180px;
+    width: clamp(180px, 50vw, 200px);
+    height: clamp(160px, 45vw, 180px);
     }
 
     .frame {
-    border-width: 10px;
-    border-radius: 14px;
+    border-width: clamp(8px, 1.5vw, 10px);
+    border-radius: clamp(10px, 1.5vw, 14px);
     }
 
     .roles li {
-    font-size: 13px;
+    font-size: clamp(0.75rem, 1.3vw, 0.85rem);
     }
 
     .grid {
-    gap: 40px;
+    gap: clamp(20px, 4vw, 40px);
     }
     .grid2 {
-    gap: 40px;
-    grid-template-columns: repeat(4, minmax(120px, 1fr));
+    gap: clamp(20px, 4vw, 40px);
+    grid-template-columns: repeat(auto-fit, minmax(min(120px, 100%), 1fr));
   }
   .countryList { gap: 8px; }
 }
 
-
 @media (max-width: 700px) {
-.aboutUs h1{
-    font-size: 1.5rem;
+    .aboutUs h1{
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
     }
 
     .aboutUs p{
-    padding: 0 4rem;
-    font-size:0.5rem;
+    padding: 0 clamp(1rem, 2vw, 2rem);
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
     }
 
     .grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: clamp(20px, 5vw, 36px);
     }
 
     .photo {
-    width: 220px;
-    height: 200px;
+    width: clamp(180px, 60vw, 220px);
+    height: clamp(160px, 55vw, 200px);
     }
     .grid2 {
-    grid-template-columns: repeat(2, minmax(160px, 1fr));
-    gap: 28px 40px;
+    grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr));
+    gap: clamp(20px, 4vw, 28px) clamp(24px, 5vw, 40px);
   }
-  .title { margin-bottom: 32px; }
+  .title { margin-bottom: clamp(24px, 4vw, 32px); }
+}
+
+@media (max-width: 480px) {
+    .aboutUs p{
+    padding: 0 clamp(0.5rem, 3vw, 1rem);
+    }
+    
+    .grid {
+    gap: clamp(16px, 4vw, 24px);
+    }
+    
+    .grid2 {
+    grid-template-columns: 1fr;
+    gap: clamp(16px, 4vw, 24px);
+    }
+    
+    .photo {
+    width: clamp(160px, 70vw, 200px);
+    height: clamp(140px, 65vw, 180px);
+    }
 }

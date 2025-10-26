@@ -1,18 +1,18 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5rem;
-    padding: 0 5rem;
+    gap: clamp(2rem, 5vw, 5rem);
+    padding: 0 clamp(1rem, 4vw, 5rem);
     justify-content: center;
 }
 
 .container {
-    padding: 5rem;
+    padding: clamp(2rem, 4vw, 5rem);
 }
 
 .backbutton{
     display: flex;
-    margin: 100px;
+    margin: clamp(3rem, 8vw, 6.25rem);
     background: none !important;
     border: none;
     outline: none;
@@ -28,11 +28,46 @@
 @media (max-width: 1200px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: clamp(1.5rem, 4vw, 4rem);
+        padding: 0 clamp(1rem, 3vw, 4rem);
+    }
+    
+    .container {
+        padding: clamp(1.5rem, 3vw, 4rem);
+    }
+    
+    .backbutton {
+        margin: clamp(2rem, 6vw, 5rem);
     }
 }
 
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr;
+        gap: clamp(1rem, 3vw, 3rem);
+        padding: 0 clamp(0.5rem, 2vw, 2rem);
+    }
+    
+    .container {
+        padding: clamp(1rem, 2.5vw, 3rem);
+    }
+    
+    .backbutton {
+        margin: clamp(1.5rem, 4vw, 3rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        gap: clamp(0.8rem, 2vw, 1.5rem);
+        padding: 0 clamp(0.5rem, 1.5vw, 1rem);
+    }
+    
+    .container {
+        padding: clamp(0.8rem, 2vw, 1.5rem);
+    }
+    
+    .backbutton {
+        margin: clamp(1rem, 3vw, 2rem);
     }
 }

@@ -11,7 +11,7 @@ const Cart = () => {
                 <img src="/backarrow.png" alt="Back" />
             </button>
 
-            <h1>Your Cart</h1>
+            <h1 className={styles.title}>Your Cart</h1>
 
             <section>
                 <article>
