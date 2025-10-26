@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import type { ProductType } from "../types/ProductType";
 import { getCollections } from "../db/appwritedb";
 import styles from './Header.module.css'
+import { Link } from "react-router-dom";
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
@@ -41,7 +42,7 @@ const SearchBar = () => {
         <div className={styles.searchResults}>
           {filteredItems.length > 0 ? (
             filteredItems.map((item) => (
-              <p key={item.$id}>{item.name}</p>
+                <Link to={`/productpage/${item.$id}`}><p key={item.$id}>{item.name}</p></Link>
             ))
           ) : (
             <p>No products found.</p>

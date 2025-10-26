@@ -13,7 +13,8 @@ const Product = ({product}: ProductProps) => {
             <div className={styles.img}>
                 <Link to={`/productpage/${product.$id}`}>
                     <img src={product.image} alt="Product Image" />
-                    <h4>{ product.name }</h4>
+                    <h4>{ product.name}</h4>
+                    <p>{product.price} €</p>
                 </Link>
             </div>
         </div>

@@ -7,8 +7,8 @@ const Footer = () => {
                 <div>
                     <p>Contacts:</p>
                     <ul>
-                        <li>+373 95532433 - manager</li>
-                        <li>+373 44829204 - information center</li>
+                        <li>+373 95532433 - Manager</li>
+                        <li>+373 44829204 - Information Center</li>
                         <li>lunatech@gmail.com</li>
                     </ul>
                 </div>
