@@ -165,18 +165,47 @@
     }
     .links li a {
       font-size: 0.7rem;
-    }
-    .cart_search {
-      gap: 2rem;
-    }
-    .cartIcon {
-      width: 1.5rem;
-      height: auto;
-    }
-    .searchIcon{
-      width: 1.2rem;
-      height: auto;
-    }
+    }.searchContainer {
+    margin: 16px auto;
+    max-width: 360px;
+  }
+
+  .searchInput {
+    padding: 10px 42px 10px 16px;
+    font-size: 0.9rem;
+    border-radius: 40px;
+  }
+
+  .searchButton {
+    right: 8px;
+    padding: 6px;
+  }
+
+  .searchIcon {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .searchResults {
+    top: 105%;
+    max-height: 200px;
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .searchResults p {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .cart_search {
+    gap: 2rem;
+  }
+
+  .cartIcon {
+    width: 1.5rem;
+    height: auto;
+  }
   }
   
   /* Mobile (up to 768px) */
@@ -202,36 +231,52 @@
     .links li a {
       font-size: 100%;
     }
-  
-    .cart_search {
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 10px;
-    }
-  
+
     .topbar {
       font-size: 12px;
       padding: 6px 10px;
     }
+
+
+
+  .cart_search {
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .cartIcon {
+    width: 1.2rem;
+  }
+
+  .searchContainer {
+    max-width: 300px;
+    margin: 20px auto;
+  }
+
+  .searchInput {
+    padding: 8px 36px 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  .searchButton {
+    right: 6px;
+    padding: 5px;
+  }
+
+  .searchIcon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .searchResults {
+    top: 102%;
+    max-height: 180px;
+    padding: 6px;
+  }
+
+  .searchResults p {
+    padding: 6px;
+    font-size: 0.85rem;
+  }
   }
   
-  /* Small phones (up to 480px) */
-  @media (max-width: 480px) {
-    .header h1 {
-      font-size: 1rem;
-    }
-    .links li a {
-      font-size: 50%;
-    }
-    .cart_search {
-      gap: 1rem;
-    }
-    .cartIcon{
-      width: 1rem;
-      height: auto;
-    }
-    .searchIcon{
-      width: 0.8rem;
-      height: auto;
-    }
-  }

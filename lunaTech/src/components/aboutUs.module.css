@@ -1,0 +1,178 @@
+.aboutUs h1{
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin-bottom: 48px;
+    margin-top: 40px;
+    font-family: 'Exo', sans-serif;
+}
+.aboutUs p{
+     text-align: center;
+    font-size: 2rem;
+    line-height: 1.6;
+    color: white;
+    max-width: 100%;
+    padding: 0 10rem;
+    text-align: center;
+    font-family: 'Exo', sans-serif;
+}
+.team {
+  padding: clamp(24px, 6vw, 64px) 0;
+}
+
+.grid {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(28px, 6vw, 100px);
+  justify-items: center;
+  align-items: start;
+}
+
+.card {
+  text-align: center;
+  color: #e8f7ff;
+  font-family: 'Exo', sans-serif;
+}
+
+.frame {
+  border: 14px solid #cfefff;
+  border-radius: 18px;
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.photo {
+  width: 260px;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.roles {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  line-height: 1.35;
+}
+
+.roles li {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.delivery {
+  padding: clamp(32px, 6vw, 80px) 0;
+  color: #e7f2ff;
+}
+
+.title {
+  font-family: "Oxanium", sans-serif;
+  font-weight: semibold;
+  text-align: center;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  letter-spacing: 0.5px;
+  margin: 0 0 clamp(28px, 5vw, 56px);
+}
+
+.grid2 {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: clamp(24px, 6vw, 80px);
+}
+
+.regionTitle {
+  font-family: "Oxanium",  sans-serif;
+  font-weight: 700;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  margin: 0 0 16px;
+}
+
+.countryList {
+  list-style: none;
+  font-family: 'exo', sans-serif;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+}
+
+/* <=1024px keeps four columns if space allows; otherwise tighten spacing */
+@media (max-width: 1024px) {
+  .grid {
+    gap: 40px;
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+  }
+  .countryList { gap: 8px; }
+}
+
+/* <=768px switch to two columns for readability */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+    gap: 28px 40px;
+  }
+  .title { margin-bottom: 32px; }
+}
+
+/* <=480px single column */
+@media (max-width: 480px) {
+  .grid { grid-template-columns: 1fr; gap: 22px; }
+}
+
+
+@media (max-width: 1024px) {
+    .aboutUs h1{
+    font-size: 2rem;
+    }
+
+    .aboutUs p{
+    padding: 0 4rem;
+    font-size:1rem;
+    }
+
+    .photo {
+    width: 200px;
+    height: 180px;
+    }
+
+    .frame {
+    border-width: 10px;
+    border-radius: 14px;
+    }
+
+    .roles li {
+    font-size: 13px;
+    }
+
+    .grid {
+    gap: 40px;
+    }
+}
+
+
+@media (max-width: 700px) {
+.aboutUs h1{
+    font-size: 1.5rem;
+    }
+
+    .aboutUs p{
+    padding: 0 4rem;
+    font-size:0.5rem;
+    }
+
+    .grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    }
+
+    .photo {
+    width: 220px;
+    height: 200px;
+    }
+}
