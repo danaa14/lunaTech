@@ -24,16 +24,22 @@ const Products = () => {
     fetchProducts();
     }, [category]);
 
-    return(
-        <Layout>
+    return( 
+    <Layout>
+        <button  onClick={() => navigate(-1)} className={styles.backbutton}>
+                <img src="/backarrow.png" alt="Back" />
+            </button>
+       
             {loading ? (
                 <p>Loading...</p>
             ) : products.length > 0 ? (
+            <section className={styles.container}>
             <div className={styles.grid}>
                 {products.map((p) => (
                 <Product key={p.$id} product={p} />
                 ))}
             </div>
+            </section>
             ) : (
                 <p>No products available.</p>
             )}
