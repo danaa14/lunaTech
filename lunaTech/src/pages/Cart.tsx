@@ -15,6 +15,10 @@ const Cart = () => {
 
             <section>
                 <article>
+
+                    <img src="" alt="ProductImage" />
+                    <p>{}</p>
+                    <p>Price: {}€</p>
                 </article>
                 <h2>Total: {}</h2>
             </section>

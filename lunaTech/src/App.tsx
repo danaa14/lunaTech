@@ -1,4 +1,4 @@
-import Cart from "./Cart.tsx";
+import Cart from "./pages/Cart.tsx";
 import './App.css'
 import {Route, Routes} from 'react-router-dom'
 import Home from "./pages/Home.tsx";
