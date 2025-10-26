@@ -15,7 +15,6 @@ const Cart = () => {
 
             <section>
                 <article>
-
                 </article>
                 <h2>Total: {}</h2>
             </section>

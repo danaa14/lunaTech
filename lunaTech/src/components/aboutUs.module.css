@@ -102,30 +102,6 @@
   font-size: clamp(0.9rem, 1.1vw, 1rem);
 }
 
-/* <=1024px keeps four columns if space allows; otherwise tighten spacing */
-@media (max-width: 1024px) {
-  .grid {
-    gap: 40px;
-    grid-template-columns: repeat(4, minmax(120px, 1fr));
-  }
-  .countryList { gap: 8px; }
-}
-
-/* <=768px switch to two columns for readability */
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, minmax(160px, 1fr));
-    gap: 28px 40px;
-  }
-  .title { margin-bottom: 32px; }
-}
-
-/* <=480px single column */
-@media (max-width: 480px) {
-  .grid { grid-template-columns: 1fr; gap: 22px; }
-}
-
-
 @media (max-width: 1024px) {
     .aboutUs h1{
     font-size: 2rem;
@@ -153,6 +129,11 @@
     .grid {
     gap: 40px;
     }
+    .grid2 {
+    gap: 40px;
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+  }
+  .countryList { gap: 8px; }
 }
 
 
@@ -175,4 +156,9 @@
     width: 220px;
     height: 200px;
     }
+    .grid2 {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+    gap: 28px 40px;
+  }
+  .title { margin-bottom: 32px; }
 }
