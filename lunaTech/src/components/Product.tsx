@@ -11,7 +11,7 @@ const Product = ({product}: ProductProps) => {
     return (
         <div className={styles.container}>
             <div className={styles.img}>
-                <Link to={`/productpage/${product.$id}`}>
+                <Link to={`/productpage/${product.$id}`} className={styles.link}>
                     <img src={product.image} alt="Product Image" />
                     <h4>{ product.name}</h4>
                     <p>{product.price} €</p>
