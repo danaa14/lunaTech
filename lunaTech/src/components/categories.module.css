@@ -1,135 +1,113 @@
-/* Desktop - 1290px and above */
+/* Desktop ≥1290px */
 .card {
   display: flex;
   align-items: center;
-  gap: clamp(2rem, 4vw, 6rem);
-  margin: clamp(2rem, 5vw, 6rem) auto;
-  max-width: min(90%, 1400px);
+  gap: 6rem;                 /* was 2–6rem */
+  margin: 3.5rem auto;       /* was 2–6rem */
+  max-width: min(96%, 1400px); /* less space from edges */
   text-decoration: none;
   color: #E2F1F3;
-  padding: 0 clamp(1rem, 3vw, 4rem);
+  padding: 0 1rem;   
+  max-width: min(98%, 1400px);       
 }
 
-.card:nth-child(even) {
-  flex-direction: row-reverse;
-}
+.card:nth-child(even) { flex-direction: row-reverse; }
 
 .img {
   flex-shrink: 0;
-  width: clamp(280px, 40vw, 550px);
-  height: clamp(280px, 40vw, 550px);
-  padding: clamp(1.25rem, 2.5vw, 2.5rem);
+  width: 28rem;              /* ~448px (smaller than before) */
+  height: 28rem;
+  padding: 2rem;
   background-color: #E2F1F3;
-  border-radius: clamp(2rem, 4vw, 3.75rem);
+  border-radius: 3rem;       /* ~48px */
   overflow: hidden;
 }
 
-.img img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
+.img img { width: 100%; height: 100%; object-fit: contain; }
 
-.info {
-  flex: 1;
-}
-
-.card:nth-child(even) .info {
-  text-align: left;
-}
-
-.card:nth-child(odd) .info {
-  text-align: right;
-}
+.info { flex: 1; }
+.card:nth-child(even) .info { text-align: left; }
+.card:nth-child(odd) .info { text-align: right; }
 
 .info h2 {
-  font-size: clamp(2rem, 5vw, 5rem);
-  margin-bottom: clamp(1rem, 2vw, 2.5rem);
+  font-size: 3.5rem;         /* smaller headline */
+  margin-bottom: 1.75rem;
   font-family: 'Oxanium', sans-serif;
   font-weight: 700;
 }
 
 .info p {
-  font-size: clamp(1rem, 2vw, 1.75rem);
+  font-size: 1.25rem;        /* smaller body */
   line-height: 1.7;
   font-family: 'Exo', sans-serif;
 }
 
-/* Tablet - up to 1024px */
-@media (max-width: 1024px) {
+/* Tablet ≤1024px */
+@media (max-width: 64rem) {
   .card {
-    gap: clamp(1.5rem, 3vw, 3rem);
-    margin: clamp(2rem, 4vw, 4rem) auto;
-    padding: 0 clamp(1rem, 2vw, 1.5rem);
+    gap: 2.5rem;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    max-width: min(98%, 1400px); /* hug edges a bit more on tablet too */
   }
 
   .img {
-    width: clamp(250px, 35vw, 320px);
-    height: clamp(250px, 35vw, 320px);
-    padding: clamp(1rem, 2vw, 1.25rem);
-    border-radius: clamp(1.5rem, 3vw, 2.5rem);
+    width: 19rem;            /* ~304px */
+    height: 19rem;
+    padding: 1rem;
+    border-radius: 2rem;
   }
 
   .info h2 {
-    font-size: clamp(1.75rem, 3.5vw, 3rem);
-    margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
   }
 
-  .info p {
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-  }
+  .info p { font-size: 1.125rem; }
 }
 
-/* Mobile - up to 768px */
-@media (max-width: 768px) {
+/* Mobile ≤768px */
+@media (max-width: 48rem) {
   .card {
     flex-direction: column !important;
-    gap: clamp(1.5rem, 3vw, 2rem);
-    margin: clamp(1.5rem, 4vw, 3rem) auto;
-    padding: 0 clamp(0.5rem, 2vw, 1rem);
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 0 0.75rem;
+    max-width: 100%;
   }
 
   .img {
-    width: clamp(200px, 60vw, 280px);
-    height: clamp(200px, 60vw, 280px);
-    padding: clamp(1rem, 2vw, 1.25rem);
-    border-radius: clamp(1rem, 3vw, 1.875rem);
+    width: 15rem;            /* ~240px */
+    height: 15rem;
+    padding: 0.875rem;
+    border-radius: 1.5rem;
   }
 
-  .info {
-    text-align: center !important;
-  }
+  .info { text-align: center !important; }
 
   .info h2 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
   }
 
-  .info p {
-    font-size: clamp(0.875rem, 2vw, 1.125rem);
-  }
+  .info p { font-size: 1rem; }
 }
 
-/* Small Mobile - up to 480px */
-@media (max-width: 480px) {
+/* Small Mobile ≤480px */
+@media (max-width: 30rem) {
   .card {
-    gap: clamp(1rem, 3vw, 1.5rem);
-    margin: clamp(1rem, 3vw, 2rem) auto;
-    padding: 0 clamp(0.5rem, 2vw, 0.75rem);
+    gap: 1.25rem;
+    margin: 1.5rem auto;
+    padding: 0 0.5rem;
   }
 
   .img {
-    width: clamp(180px, 70vw, 240px);
-    height: clamp(180px, 70vw, 240px);
-    padding: clamp(0.75rem, 2vw, 1rem);
-    border-radius: clamp(0.75rem, 2.5vw, 1.25rem);
+    width: 13.5rem;          /* ~216px */
+    height: 13.5rem;
+    padding: 0.75rem;
+    border-radius: 1rem;
   }
 
-  .info h2 {
-    font-size: clamp(1.25rem, 4vw, 1.75rem);
-  }
-
-  .info p {
-    font-size: clamp(0.75rem, 2vw, 0.875rem);
-  }
+  .info h2 { font-size: 1.5rem; }
+  .info p { font-size: 0.875rem; }
 }

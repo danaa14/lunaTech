@@ -1,14 +1,13 @@
 .container {
-  
-    background-color: #E2F1F3;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    gap: 3rem;
-    overflow: hidden;
+  background-color: #E2F1F3;
+  border-radius: 1.25rem;        /* 20px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3rem;
+  overflow: hidden;
 }
 
 .container:hover{
@@ -19,10 +18,12 @@
     
 }
 
+.img { margin: 5rem; }
+
 .container img {
-    max-height: 20rem;
-    max-width: 26rem;
-    object-fit: contain;
+  max-height: 20rem;
+  max-width: 26rem;
+  object-fit: contain;
 }
 
 .container h4 {

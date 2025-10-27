@@ -4,22 +4,23 @@
   align-items: center;
 }
 
-/*Start fisrt section*/
-.line{
-  margin-top: clamp(5rem, 15vw, 20rem);
+/* ───────────── Line separator ───────────── */
+.line {
+  margin-top: 10rem;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   border: none;
-  border-top: 2px solid #ccc;
+  border-top: 0.125rem solid #ccc;
 }
 
+/* ───────────── Section 1 ───────────── */
 .section1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: clamp(1rem, 2vw, 2rem);
+  padding-top: 2rem;
   width: 100vw;
   background: linear-gradient(180deg, #26668C 0%, #0A1C26 100%);
 }
@@ -29,257 +30,256 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: min(50%, 600px);
-  padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 2vw, 2rem) 0 clamp(2rem, 5vw, 7rem);
+  max-width: 37.5rem; /* 600px */
+  padding: 4rem 2rem 0 4rem;
 }
 
-.section1 h1{
-  font-size: clamp(2rem, 6vw, 6rem);
+.section1 h1 {
+  font-size: 5rem;
   font-family: 'Oxanium', sans-serif;
-  margin-bottom: clamp(2rem, 4vw, 6rem);
-  margin-top: 0;
+  margin-bottom: 4rem;
   color: white;
   line-height: 1.2;
 }
 
-.section1 h2{
-  font-size: clamp(1.5rem, 3vw, 3rem);
-  margin-top: 0;
+.section1 h2 {
+  font-size: 2.5rem;
   font-family: 'Exo', sans-serif;
   color: white;
   line-height: 1.3;
 }
 
-.section1 img{
-  width: clamp(20rem, 70vw, 90rem);
+.section1 img {
+  width: 60rem;
   height: auto;
   object-fit: contain;
-  padding: 0 clamp(1rem, 2vw, 2rem);
-  padding-right: clamp(2rem, 5vw, 7rem);
+  padding: 0 2rem;
+  padding-right: 4rem;
 }
 
-/*First section done*/
-
-/*Start second section*/
+/* ───────────── Section 2 ───────────── */
 .section2 {
   width: 100vw;
-  padding: clamp(2rem, 4vw, 4rem) clamp(1.5rem, 3vw, 3rem);
-  min-height: min(100vh, 800px);
+  padding: 4rem 3rem;
+  min-height: 50rem;
 }
 
 .section2 h3 {
-  font-size: clamp(1.5rem, 3vw, 3rem);
+  font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
   color: white;
-  margin-bottom: clamp(2rem, 3vw, 3rem);
+  margin-bottom: 3rem;
   font-family: 'Exo', sans-serif;
 }
 
-.section2 button{
-  width: clamp(8rem, 20vw, 15.625rem);
-  height: clamp(2.5rem, 5vw, 4.375rem);
-  font-size: clamp(1rem, 2.5vw, 2.25rem);
-  border-radius: clamp(0.5rem, 1vw, 1rem);
-  margin-top: clamp(3rem, 8vw, 7.5rem);
+.section2 button {
+  width: 15rem;
+  height: 4rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  margin-top: 6rem;
   background-color: #A7ECF3;
-  font-family: 'exo', sans-serif;
+  font-family: 'Exo', sans-serif;
 }
 
-/*Second section done*/
-
-/*Start third section*/
+/* ───────────── Section 3 ───────────── */
 .section3 {
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  margin: clamp(3rem, 8vw, 6.25rem) 0;
+  margin: 6rem 0;
 }
 
 .section3 h1 {
-  font-size: clamp(1.5rem, 3.5vw, 3.5rem);
+  font-size: 3rem;
   font-weight: bold;
   text-align: center;
   color: white;
-  margin-bottom: clamp(2rem, 3vw, 3rem);
+  margin-bottom: 3rem;
   font-family: 'Exo', sans-serif;
-} 
-.section3 p {
-    text-align: center;
-    font-size: clamp(1rem, 2vw, 2rem);
-    line-height: 1.6;
-    color: white;
-    max-width: min(90%, 1200px);
-    margin: 0 auto;
-    padding: 0 clamp(1rem, 4vw, 5rem);
-    font-family: 'Exo', sans-serif;
 }
 
-/* Tablet - up to 1024px */
-@media (max-width: 1024px) {
+.section3 p {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.6;
+  color: white;
+  max-width: 75rem; /* 1200px */
+  margin: 0 auto;
+  padding: 0 4rem;
+  font-family: 'Exo', sans-serif;
+}
+
+/* ───────────── Tablet ≤1024px ───────────── */
+@media (max-width: 64rem) {
+  .line { margin-top: 6rem; }
+
   .section1 {
     flex-direction: row;
     height: auto;
-    padding: clamp(2rem, 4vw, 3.125rem) 0;
+    padding: 2.5rem 0;
   }
 
   .section1 .text {
-    max-width: min(90%, 500px);
-    padding: 0 clamp(1rem, 2vw, 1.25rem);
+    max-width: 31rem;
+    padding: 0 2rem;
   }
 
   .section1 h1 {
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    font-size: 3rem;
+    margin-bottom: 2rem;
   }
 
   .section1 h2 {
-    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
   }
 
   .section1 img {
-    width: clamp(15rem, 45vw, 25rem);
-    padding: 0 clamp(1rem, 2vw, 1.25rem);
+    width: 25rem;
+    padding: 0 1.25rem;
   }
 
   .section2 {
-    padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
+    padding: 2.5rem 1.5rem;
   }
 
   .section2 h3 {
-    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-    margin-bottom: clamp(1.5rem, 2.5vw, 2rem);
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
   }
 
   .section2 button {
-    width: clamp(7rem, 15vw, 9.375rem);
-    height: clamp(2rem, 4vw, 2.5rem);
-    font-size: clamp(0.9rem, 2vw, 1.125rem);
-    margin-top: clamp(2rem, 5vw, 3.75rem);
+    width: 10rem;
+    height: 2.75rem;
+    font-size: 1.25rem;
+    margin-top: 3.5rem;
   }
 
   .section3 h1 {
-    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-    margin-bottom: clamp(1.5rem, 2.5vw, 2rem);
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
 
-    .section3 p {
-    font-size: clamp(0.9rem, 1.8vw, 1.125rem);
-    padding: 0 clamp(1rem, 3vw, 4rem);
+  .section3 p {
+    font-size: 1.25rem;
+    padding: 0 2rem;
   }
 }
 
-/* Mobile - up to 768px */
-@media (max-width: 768px) {
+/* ───────────── Mobile ≤768px ───────────── */
+@media (max-width: 48rem) {
   .section1 {
     flex-direction: column;
     text-align: center;
-    height: auto;
-    gap: clamp(1rem, 3vw, 1.875rem);
-    padding: clamp(1.5rem, 3vw, 2.5rem) 0;
+    gap: 1.5rem;
+    padding: 2rem 0;
   }
 
   .section1 .text {
-    max-width: min(95%, 400px);
-    padding: 0 clamp(0.5rem, 1.5vw, 1rem);
+    max-width: 25rem;
+    padding: 0 1rem;
   }
 
   .section1 h1 {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
   }
 
   .section1 h2 {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
   }
 
   .section1 img {
-    width: clamp(12rem, 60vw, 20rem);
+    width: 20rem;
     padding: 0;
   }
 
   .section2 {
-    padding: clamp(1rem, 2.5vw, 2rem) clamp(0.75rem, 1.5vw, 1rem);
+    padding: 2rem 1rem;
   }
 
   .section2 h3 {
-    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    font-size: 1.5rem;
   }
 
   .section2 button {
-    width: clamp(6rem, 12vw, 7rem);
-    height: clamp(1.75rem, 3.5vw, 2rem);
-    font-size: clamp(0.8rem, 1.8vw, 1rem);
-    margin-top: clamp(1.5rem, 4vw, 2.5rem);
+    width: 8rem;
+    height: 2.25rem;
+    font-size: 1rem;
+    margin-top: 2.5rem;
   }
 
   .section3 {
-    margin: clamp(2rem, 5vw, 3rem) 0;
+    margin: 3rem 0;
   }
 
   .section3 h1 {
-    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-size: 1.5rem;
   }
 
-    .section3 p {
-    font-size: clamp(0.8rem, 1.8vw, 1rem);
-    padding: 0 clamp(0.5rem, 2vw, 2rem);
+  .section3 p {
+    font-size: 1rem;
+    padding: 0 1.5rem;
   }
 }
 
-/* Small Mobile - up to 480px */
-@media (max-width: 480px) {
+/* ───────────── Small Mobile ≤480px ───────────── */
+@media (max-width: 30rem) {
+  .line { margin-top: 4rem; }
+
   .section1 {
-    gap: clamp(0.75rem, 2vw, 1rem);
-    padding: clamp(1rem, 2vw, 1.5rem) clamp(0.5rem, 1vw, 0.75rem);
+    gap: 1rem;
+    padding: 1.25rem 0.5rem;
   }
 
   .section1 .text {
     max-width: 100%;
-    padding: 0 clamp(0.5rem, 1vw, 0.75rem);
+    padding: 0 0.75rem;
   }
 
   .section1 h1 {
-    font-size: clamp(1.25rem, 3.5vw, 1.75rem);
-    margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
   }
 
   .section1 h2 {
-    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
-    margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
   }
 
   .section1 img {
-    width: clamp(10rem, 70vw, 15rem);
+    width: 15rem;
   }
 
   .section2 {
-    padding: clamp(0.75rem, 2vw, 1rem) clamp(0.5rem, 1vw, 0.75rem);
+    padding: 1rem 0.5rem;
   }
 
   .section2 h3 {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    margin-bottom: clamp(1rem, 2vw, 1.25rem);
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
   }
 
   .section2 button {
-    width: clamp(5rem, 15vw, 6rem);
-    height: clamp(1.5rem, 4vw, 1.75rem);
-    font-size: clamp(0.7rem, 1.8vw, 0.9rem);
-    margin-top: clamp(1rem, 3vw, 1.5rem);
+    width: 6rem;
+    height: 1.75rem;
+    font-size: 0.85rem;
+    margin-top: 1.5rem;
   }
 
   .section3 h1 {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    margin-bottom: clamp(1rem, 2vw, 1.25rem);
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
   }
- .section3 p {
-    font-size: clamp(0.7rem, 1.8vw, 0.9rem);
-    padding: 0 clamp(0.5rem, 1.5vw, 1rem);
+
+  .section3 p {
+    font-size: 0.9rem;
+    padding: 0 1rem;
     line-height: 1.5;
   }
 }

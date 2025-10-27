@@ -2,54 +2,43 @@
   background: linear-gradient(180deg, #26668C 0%, #0A1C26 100%);
   color: #E2F1F3;
   text-align: center;
-  padding: clamp(2rem, 5vw, 3.125rem) clamp(1rem, 6vw, 5rem);
   position: relative;
-  min-height: clamp(250px, 40vw, 300px);
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center;
   overflow-x: hidden;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  padding: 2.5rem 2rem;
+  min-height: 15rem;
 }
 
-.footer * {
-  box-sizing: border-box;
-  max-width: 100%;
-}
-
-body, html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
+.footer * { box-sizing: border-box; max-width: 100%; }
 
 .footer article {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;            /* ✅ stay in row */
   width: 100%;
-  margin-bottom: clamp(1rem, 2vw, 1.25rem);
+  gap: 2rem;
+  margin-bottom: 1.25rem;
+  padding: 0 1rem;
 }
 
 .footer h2 {
   margin: 0;
-  display: block;
-  text-align: center;
-  position: static;
-  font-size: clamp(2rem, 8vw, 7rem);
+  font-size: 3.5rem;
   font-family: 'Oxanium', sans-serif;
   color: #E2F1F3;
   white-space: nowrap;
 }
 
-.footer article > div{
-  flex:1;
-  min-width: clamp(180px, 25vw, 220px);
+.footer article > div {
+  flex: 1;
+  min-width: 12rem;
 }
 
 .footer article ul {
@@ -59,195 +48,188 @@ body, html {
 }
 
 .footer article li {
-  font-size: clamp(0.8rem, 1.5vw, 1.25rem);
-  margin: clamp(0.125rem, 0.5vw, 0.1875rem) 0;
-  text-decoration: none;
-  font-family:'Exo', sans-serif;
+  font-size: 1.1rem;
+  margin: 0.2rem 0;
+  font-family: 'Exo', sans-serif;
   color: #E2F1F3;
 }
 
-/*left side*/
-
-.footer article div:first-child {
-  text-align: left;
-}
-
+/* Left */
+.footer article div:first-child { text-align: left; }
 .footer article div:first-child p {
-  font-size: clamp(1rem, 2.5vw, 2rem);
-  font-family:'Exo', sans-serif;
+  font-size: 1rem;
+  font-family: 'Exo', sans-serif;
   color: #E2F1F3;
-  margin-bottom: clamp(0.25rem, 1vw, 0.375rem);
+  margin-bottom: 0.25rem;
 }
 
-/*right side*/
-
-.footer article div:last-child{
-  text-align: right;
-}
-
+/* Right */
+.footer article div:last-child { text-align: right; }
 .footer article div:last-child p {
-  font-size: clamp(1rem, 2.5vw, 2rem);
-  font-family:'Exo', sans-serif;
+  font-size: 1.1rem;
+  font-family: 'Exo', sans-serif;
   color: #E2F1F3;
-  margin-bottom: clamp(0.25rem, 1vw, 0.375rem);
+  margin-bottom: 0.25rem;
 }
 
 .footer article div:last-child ul {
-  display:flex;
-  justify-content: flex-end;
-  gap: clamp(0.5rem, 1vw, 0.625rem);
-  align-items: center;
-  
-}
-
-.footer article div:last-child li {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  margin-top: clamp(1rem, 2vw, 1.25rem);
+  gap: 0.75rem;
 }
-
 
 .footer ul li a img {
-  width: clamp(2rem, 5vw, 4rem);
-  height: clamp(2rem, 5vw, 4rem);
+  width: 2rem;
+  height: 2rem;
   object-fit: contain;
-  margin: 0 clamp(0.25rem, 1vw, 0.5rem);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.footer article div:last-child img{
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.footer article div:last-child img:hover{
+.footer ul li a img:hover {
   transform: scale(1.1);
   filter: brightness(1.2);
   cursor: pointer;
 }
 
 .footer-bottom {
-  font-size: clamp(0.8rem, 2vw, 1.5rem);
+  font-size: 1rem;
   color: #a7ecf3;
   text-align: center;
-  margin-top: clamp(1rem, 3vw, 1.875rem);
+  margin-top: 1rem;
 }
 
-/* ✅ Tablets (up to 1024px) */
-@media (max-width: 1024px) {
+/* ≤ 1024px */
+@media (max-width: 64rem) {
   .footer {
-    padding: clamp(1.25rem, 3vw, 1.5rem) clamp(2rem, 5vw, 2.8125rem);
+    padding: 2rem 1.5rem;
   }
 
-  .footer h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    padding-bottom: clamp(1.5rem, 4vw, 2.1875rem);
-  }
+  .footer h2 { font-size: 2.75rem; }
 
   .footer article {
-    flex-wrap: wrap;
-    gap: clamp(1rem, 2.5vw, 1.25rem);
+    gap: 1.25rem;
+    padding: 0 0.75rem;
   }
 
   .footer article div:first-child p,
   .footer article div:last-child p {
-    font-size: clamp(1.25rem, 2vw, 1.7rem);
+    font-size: 0.8rem;
   }
 
-  .footer article li {
-    font-size: clamp(0.9rem, 1.5vw, 1.15rem);
-  }
+  .footer article li { font-size: 0.8rem; }
 
   .footer ul li a img {
-    width: clamp(2.5rem, 6vw, 3.4375rem);
-    height: clamp(2.5rem, 6vw, 3.4375rem);
+    width: 1.75rem;
+    height: 1.75rem;
   }
 }
 
-/* ✅ Mobile (up to 768px) */
-@media (max-width: 768px) {
+/* ≤ 768px */
+@media (max-width: 48rem) {
   .footer {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: fit-content;
-    padding: clamp(1rem, 2.5vw, 1.25rem) clamp(1rem, 3vw, 1.25rem);
-    text-align: center;
+    padding: 1.5rem 1rem;
   }
 
-  .footer h2 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    padding-bottom: clamp(1rem, 3vw, 1.5625rem);
-  }
+  .footer h2 { font-size: 2.25rem; }
 
   .footer article {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: clamp(1rem, 3vw, 2rem);
+    gap: 0.75rem;             /* ✅ tighter gaps, still in a row */
+    flex-wrap: nowrap;
   }
 
   .footer article div:first-child,
   .footer article div:last-child {
-    text-align: center;
-    width: 100%;
+    text-align: center;       /* stays readable */
   }
 
   .footer article div:first-child p,
-  .footer article div:last-child p {
-    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-  }
+  .footer article div:last-child p { font-size: 0.7rem; }
 
-  .footer article li {
-    font-size: clamp(1rem, 1.8vw, 1.2rem);
-  }
-
-  .footer article div:last-child ul {
-    justify-content: center;
-  }
+  .footer article li { font-size: 0.7rem; }
 
   .footer ul li a img {
-    width: clamp(2rem, 5vw, 3rem);
-    height: clamp(2rem, 5vw, 3rem);
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
-  .footer-bottom {
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    text-align: center;
-  }
+  .footer-bottom { font-size: 0.6rem; }
 }
 
-/* ✅ Small Phones (up to 480px) */
-@media (max-width: 480px) {
+/* ≤ 480px */
+@media (max-width: 30rem) {
   .footer {
-    padding: clamp(1rem, 3vw, 1.25rem) clamp(0.5rem, 2vw, 0.625rem);
+    width: 100%;
+    padding: 1rem 0.5rem;
   }
 
-  .footer h2 {
-    font-size: clamp(1.25rem, 4vw, 2rem);
-    padding-bottom: clamp(0.75rem, 3vw, 1.25rem);
-  }
+  .footer h2 { font-size: 1rem; }
 
   .footer article {
-    gap: clamp(1.5rem, 4vw, 2rem);
+    gap: 0.5rem;
+    flex-wrap: nowrap;        /* ✅ keep single row */
+  }
+
+  .footer article > div {
+    flex: 1 1 0;
+    min-width: 5rem;          /* shrink columns */
   }
 
   .footer article div:first-child p,
-  .footer article div:last-child p {
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  }
+  .footer article div:last-child p { font-size: 0.5rem; }
 
-  .footer article li {
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-  }
+  .footer article li { font-size: 0.5rem; }
 
   .footer ul li a img {
-    width: clamp(1.75rem, 5vw, 2.5rem);
-    height: clamp(1.75rem, 5vw, 2.5rem);
+    width: 1.25rem;
+    height: 1.25rem;
   }
 
-  .footer-bottom {
-    font-size: clamp(0.8rem, 2vw, 1rem);
+  .footer-bottom { font-size: 0.4rem;
+  font-family: 'exo', sans-serif; }
+}
+/* --- anti-overflow fixes --- */
+html, body { overflow-x: hidden; }            /* belt */
+.footer { overflow-x: clip; }                 /* suspenders: clip paint outside box */
+
+/* Let the flex row shrink instead of pushing width > viewport */
+.footer article { 
+  min-width: 0; 
+}
+.footer article > div {
+  flex: 1 1 0;        /* allow shrink */
+  min-width: 0;       /* CRUCIAL: otherwise flex items refuse to shrink */
+}
+
+/* Images/links never force overflow */
+.footer ul li a,
+.footer ul li a img {
+  max-width: 100%;
+}
+
+/* 360px and down: let the center title wrap to avoid pushing a white gutter */
+@media (max-width: 22.5rem) { /* 360px */
+  .footer { padding: 0.875rem 0.5rem; }     /* slightly tighter sides */
+  .footer article { gap: 0.4rem; padding: 0 0.25rem; }
+  .footer article > div { min-width: 0; }
+
+  .footer h2 {
+    white-space: normal;        /* was nowrap -> allow wrap */
+    word-break: break-word;
+    font-size: 1.4rem;          /* a touch smaller so row fits */
+    line-height: 1.1;
   }
+
+  .footer article li,
+  .footer article div:first-child p,
+  .footer article div:last-child p { 
+    font-size: 0.7rem;
+  }
+
+  .footer ul li a img { 
+    width: 1.1rem; 
+    height: 1.1rem; 
+  }
+
+  .footer-bottom { font-size: 0.75rem; }
 }

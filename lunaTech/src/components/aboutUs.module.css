@@ -1,32 +1,33 @@
 .aboutUs h1{
-    font-size: clamp(1.5rem, 5vw, 3rem);
-    font-weight: bold;
-    text-align: center;
-    color: white;
-    margin-bottom: clamp(24px, 4vw, 48px);
-    margin-top: clamp(20px, 3vw, 40px);
-    font-family: 'Exo', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-bottom: 3rem;   /* 48px */
+  margin-top: 2.5rem;    /* 40px */
+  font-family: 'Exo', sans-serif;
 }
+
 .aboutUs p{
-     text-align: center;
-    font-size: clamp(1rem, 2.5vw, 2rem);
-    line-height: 1.6;
-    color: white;
-    max-width: 100%;
-    padding: 0 clamp(1rem, 4vw, 10rem);
-    text-align: center;
-    font-family: 'Exo', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.6;
+  color: white;
+  max-width: 100%;
+  padding: 0 10rem;      /* was up to 10rem via clamp */
+  font-family: 'Exo', sans-serif;
 }
+
 .team {
-  padding: clamp(24px, 6vw, 64px) 0;
+  padding: 4rem 0;       /* 64px top/bottom */
 }
 
 .grid {
   width: min(1100px, 92vw);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: clamp(28px, 6vw, 100px);
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr)); /* 280px */
+  gap: 6.25rem;          /* 100px */
   justify-items: center;
   align-items: start;
 }
@@ -38,58 +39,58 @@
 }
 
 .frame {
-  border: clamp(8px, 2vw, 14px) solid #cfefff;
-  border-radius: clamp(12px, 2vw, 18px);
+  border: 0.875rem solid #cfefff;   /* 14px */
+  border-radius: 1.125rem;          /* 18px */
   display: inline-flex;
   overflow: hidden;
 }
 
 .photo {
-  width: clamp(200px, 60vw, 260px);
-  height: clamp(180px, 55vw, 220px);
+  width: 16.25rem;   /* 260px */
+  height: 13.75rem;  /* 220px */
   object-fit: cover;
   display: block;
 }
 
 .roles {
   list-style: none;
-  margin: clamp(12px, 2vw, 16px) 0 0;
+  margin: 1rem 0 0;  /* 16px */
   padding: 0;
   line-height: 1.35;
 }
 
 .roles li {
-  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  font-size: 0.95rem;
   opacity: 0.95;
 }
 
 .delivery {
-  padding: clamp(32px, 6vw, 80px) 0;
+  padding: 5rem 0;   /* 80px */
   color: #e7f2ff;
 }
 
 .title {
   font-family: "Oxanium", sans-serif;
-  font-weight: semibold;
+  font-weight: 600;
   text-align: center;
-  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-size: 2.6rem;
   letter-spacing: 0.5px;
-  margin: 0 0 clamp(28px, 5vw, 56px);
+  margin: 0 0 3.5rem; /* 56px */
 }
 
 .grid2 {
   width: min(1100px, 92vw);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
-  gap: clamp(24px, 6vw, 80px);
+  grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr)); /* 160px */
+  gap: 5rem; /* 80px */
 }
 
 .regionTitle {
   font-family: "Oxanium",  sans-serif;
   font-weight: 700;
-  font-size: clamp(1rem, 1.4vw, 1.25rem);
-  margin: 0 0 16px;
+  font-size: 1.25rem;
+  margin: 0 0 1rem;  /* 16px */
 }
 
 .countryList {
@@ -98,86 +99,78 @@
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 10px;
-  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  gap: 0.625rem;  /* 10px */
+  font-size: 1rem;
 }
 
-@media (max-width: 1024px) {
-    .aboutUs h1{
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    }
+/* ≤ 1024px */
+@media (max-width: 64rem) {
+  .aboutUs h1 { font-size: 2rem; }
 
-    .aboutUs p{
-    padding: 0 clamp(2rem, 3vw, 4rem);
-    font-size: clamp(0.9rem, 1.8vw, 1rem);
-    }
-
-    .photo {
-    width: clamp(180px, 50vw, 200px);
-    height: clamp(160px, 45vw, 180px);
-    }
-
-    .frame {
-    border-width: clamp(8px, 1.5vw, 10px);
-    border-radius: clamp(10px, 1.5vw, 14px);
-    }
-
-    .roles li {
-    font-size: clamp(0.75rem, 1.3vw, 0.85rem);
-    }
-
-    .grid {
-    gap: clamp(20px, 4vw, 40px);
-    }
-    .grid2 {
-    gap: clamp(20px, 4vw, 40px);
-    grid-template-columns: repeat(auto-fit, minmax(min(120px, 100%), 1fr));
+  .aboutUs p{
+    padding: 0 4rem;
+    font-size: 1rem;
   }
-  .countryList { gap: 8px; }
-}
 
-@media (max-width: 700px) {
-    .aboutUs h1{
-    font-size: clamp(1.25rem, 3vw, 1.5rem);
-    }
-
-    .aboutUs p{
-    padding: 0 clamp(1rem, 2vw, 2rem);
-    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
-    }
-
-    .grid {
-    grid-template-columns: 1fr;
-    gap: clamp(20px, 5vw, 36px);
-    }
-
-    .photo {
-    width: clamp(180px, 60vw, 220px);
-    height: clamp(160px, 55vw, 200px);
-    }
-    .grid2 {
-    grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr));
-    gap: clamp(20px, 4vw, 28px) clamp(24px, 5vw, 40px);
+  .photo {
+    width: 12.5rem;   /* 200px */
+    height: 11.25rem; /* 180px */
   }
-  .title { margin-bottom: clamp(24px, 4vw, 32px); }
+
+  .frame {
+    border-width: 0.625rem;  /* 10px */
+    border-radius: 0.875rem; /* 14px */
+  }
+
+  .roles li { font-size: 0.85rem; }
+
+  .grid { gap: 2.5rem; }     /* 40px */
+  .grid2 { 
+    gap: 2.5rem; 
+    grid-template-columns: repeat(auto-fit, minmax(min(7.5rem, 100%), 1fr)); /* 120px */
+  }
+  .countryList { gap: 0.5rem; } /* 8px */
 }
 
-@media (max-width: 480px) {
-    .aboutUs p{
-    padding: 0 clamp(0.5rem, 3vw, 1rem);
-    }
-    
-    .grid {
-    gap: clamp(16px, 4vw, 24px);
-    }
-    
-    .grid2 {
+/* ≤ 700px */
+@media (max-width: 43.75rem) {
+  .aboutUs h1 { font-size: 1.5rem; }
+
+  .aboutUs p{
+    padding: 0 2rem;
+    font-size: 0.9rem;
+  }
+
+  .grid {
     grid-template-columns: 1fr;
-    gap: clamp(16px, 4vw, 24px);
-    }
-    
-    .photo {
-    width: clamp(160px, 70vw, 200px);
-    height: clamp(140px, 65vw, 180px);
-    }
+    gap: 2.25rem; /* 36px */
+  }
+
+  .photo {
+    width: 13.75rem;  /* 220px */
+    height: 12.5rem;  /* 200px */
+  }
+
+  .grid2 {
+    grid-template-columns: repeat(auto-fit, minmax(min(8.75rem, 100%), 1fr)); /* 140px */
+    gap: 1.75rem 2.5rem; /* 28px row, 40px column */
+  }
+
+  .title { margin-bottom: 2rem; } /* 32px */
+}
+
+/* ≤ 480px */
+@media (max-width: 30rem) {
+  .aboutUs p { padding: 0 1rem; }
+
+  .grid { gap: 1.5rem; }   /* 24px */
+  .grid2 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;           /* 24px */
+  }
+
+  .photo {
+    width: 12.5rem;   /* 200px */
+    height: 11.25rem; /* 180px */
+  }
 }
