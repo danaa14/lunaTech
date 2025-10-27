@@ -18,6 +18,11 @@
   color: white;
   font-family: 'Oxanium', sans-serif;
 }
+.no{
+  font-size: 1rem;
+  font-family: 'oxanium', sans-serif;
+  color: white;
+}
 
 /* ====== 1024px (large tablets / small laptops) ====== */
 @media (max-width: 64rem) {

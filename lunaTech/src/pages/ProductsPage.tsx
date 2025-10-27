@@ -30,7 +30,7 @@ const ProductsPage = () => {
                 ))}
             </div>
             ) : (
-                <p>No products available.</p>
+                <p className={styles.no}>No products available.</p>
             )}
         </Layout>
     )
