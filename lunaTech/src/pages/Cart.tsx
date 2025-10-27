@@ -4,23 +4,46 @@ import styles from "./cart.module.css";
 import { useEffect, useState } from "react";
 import type { ProductType } from "../types/ProductType";
 
+interface CartItem extends ProductType {
+  quantity: number;
+}
+
 const Cart = () => {
   const navigate = useNavigate();
-  const [items, setItems] = useState<ProductType[]>([]);
+  const [items, setItems] = useState<CartItem[]>([]);
   const [total, setTotal] = useState<number>(0);
 
   useEffect(() => {
     const stored = localStorage.getItem("cart");
     if (stored) {
       const parsedItems: ProductType[] = JSON.parse(stored);
-      setItems(parsedItems);
-      calculateTotal(parsedItems);
+      const cartWithQuantities = parsedItems.map((item) => (
+        {
+          ...item,
+          quantity: 1,
+        }));
+      setItems(cartWithQuantities);
+      calculateTotal(cartWithQuantities);
     }
   }, []);
 
-  const calculateTotal = (cartItems: ProductType[]) => {
-    const totalValue = cartItems.reduce((sum, item) => sum + (item.price || 0), 0);
+  const calculateTotal = (cartItems: CartItem[]) => {
+    const totalValue = cartItems.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
     setTotal(totalValue);
+  };
+
+  const updateQuantity = (index: number, change: number) => {
+    const updatedItems = items.map((item, i) =>
+      i === index
+        ? { ...item, quantity: Math.max(1, item.quantity + change) }
+        : item
+    );
+    setItems(updatedItems);
+    localStorage.setItem("cart", JSON.stringify(updatedItems));
+    calculateTotal(updatedItems);
   };
 
   const deleteItemHandler = (index: number) => {
@@ -50,8 +73,20 @@ const Cart = () => {
                 />
                 <div>
                   <p className={styles.productName}>{item.name}</p>
-                  <p className={styles.productPrice}>Price: {item.price} €</p>
-                  <button onClick={() => deleteItemHandler(index)}className={styles.deleteButton}>Remove</button>
+                  <p className={styles.productPrice}>
+                    Price: {(item.price * item.quantity).toFixed(2)} €
+                  </p>
+                  <section className={styles.quantityControl}>
+                    <button onClick={() => updateQuantity(index, -1)}>-</button>
+                    <p>{item.quantity}</p>
+                    <button onClick={() => updateQuantity(index, 1)}>+</button>
+                  </section>
+                  <button
+                    onClick={() => deleteItemHandler(index)}
+                    className={styles.deleteButton}
+                  >
+                    Remove
+                  </button>
                 </div>
               </article>
             ))}
