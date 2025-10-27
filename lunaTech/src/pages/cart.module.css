@@ -1,27 +1,268 @@
-.backbutton{
-    display: flex;
-    margin: 100px;
-    background: none !important;
-    border: none;
-    outline: none;
-    box-shadow: none;
-    text-shadow: none;
-    filter: none;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    cursor: pointer;
+/* cart.module.css — v2 closer to mock */
+
+/* ===== Palette / tokens ===== */
+:root{
+  --bg:#07142f;
+  --ink:#eaf6ff;
+  --muted:#9fb6d5;
+  --line:rgba(226,241,243,.18);
+  --tile:#E2F1F3;
+  --pill:#EFF5F7;
+  --ink-dark:#173363;
+  --ring:#6db9ff33;
+  --r-lg:22px;
+  --r-md:16px;
+  --r-sm:10px;
+  --shadow:0 10px 30px rgba(5,15,45,.35);
 }
+
+/* ===== Top bits ===== */
+.backbutton{
+  display:flex;align-items:center;gap:.6rem;
+  margin:2.2rem 0 1rem;
+  background:none;border:none;cursor:pointer;padding:0;
+}
+.backbutton img{width:2.2rem;height:2.2rem;display:block;}
 
 .title{
-    font-size: 3rem;
-    font-family: 'oxanium', sans-serif;
-    color: white;
+  color:var(--ink);
+  text-align:center;
+  font-family:'Exo',sans-serif;
+  font-size:clamp(1.6rem,2.1vw,2rem);
+  margin:.3rem 0 1.4rem;
 }
 
-.checkoutSection {
-  margin-top: 4rem;
-  background: #f9f9f9;
-  padding: 2rem;
-  border-radius: 10px;
+/* ===== Wrapper ===== */
+.cartSection{width:min(1050px,92vw);margin:0 auto 3rem;}
+
+/* ===== Cart item row ===== */
+.cartItem{
+  position:relative;
+  display:grid;
+  grid-template-columns:112px 1fr;
+  gap:1.2rem;
+  align-items:center;
+  padding:1rem 1.1rem;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.06);
+  border-radius:var(--r-lg);
+  backdrop-filter:saturate(120%) blur(2px);
+  transition:border-color .15s ease, background .15s ease, transform .06s ease;
+  margin-bottom:1.1rem;
+}
+.cartItem:hover{ border-color:#9fd7ff3d; background:rgba(255,255,255,.075); }
+
+.productImage{
+  width:96px;height:96px;object-fit:contain;
+  border-radius:24px;background:var(--tile);padding:.6rem;display:block;
+}
+
+/* right column layout */
+.cartItem>div{
+  display:grid;
+  grid-template-columns:1fr auto;
+  grid-template-areas:
+    "name remove"
+    "price remove"
+    "qty remove";
+  column-gap:1rem;row-gap:.55rem;align-items:center;
+}
+
+.productName{
+  grid-area:name;
+  margin:0;color:var(--ink);
+  font-family:'Exo',sans-serif;
+  font-weight:600;
+  font-size:clamp(1rem,1.25vw,1.1rem);
+  letter-spacing:.2px;
+}
+
+.productPrice{
+  grid-area:price;margin:0;
+  color:var(--muted);font-size:.92rem;
+}
+
+/* quantity chips */
+.quantityControl{
+  grid-area:qty;display:inline-flex;align-items:center;gap:.55rem;
+}
+.quantityControl button,
+.quantityControl p{
+  width:30px;height:30px;display:grid;place-items:center;
+  border-radius:9px;font-weight:700;font-size:.9rem;margin:0;
+}
+.quantityControl button{
+  border:none;background:var(--tile);color:#0c1f4b;cursor:pointer;
+  transition:transform .05s ease, box-shadow .15s ease;
+  box-shadow:inset 0 -1px 0 rgba(0,0,0,.06);
+}
+.quantityControl button:active{ transform:translateY(1px); }
+.quantityControl p{ background:var(--tile);color:#0c1f4b;}
+
+/* remove pill (right side) */
+.deleteButton{
+  grid-area:remove;justify-self:end;
+  border:none;background:var(--pill);color:#2e4777;
+  font-size:.78rem;padding:.42rem .78rem;border-radius:999px;
+  cursor:pointer;white-space:nowrap;
+  box-shadow:inset 0 -1px 0 rgba(0,0,0,.05);
+}
+.deleteButton:hover{ filter:brightness(1.03); }
+
+/* ===== Total ===== */
+.total{
+  color:var(--ink);text-align:right;
+  font-family:'Exo',sans-serif;
+  margin:1.2rem 0 2rem;
+  font-size:clamp(1.1rem,1.7vw,1.25rem);
+}
+/* ====== CHECKOUT — FIXED LAYOUT ====== */
+.checkoutSection{
+  width:min(1050px,92vw);
+  margin:0 auto 3.5rem;
+  background:#eaf6ff;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(5,15,45,.35);
+  padding:1.2rem 1.2rem 1.6rem;
+}
+
+/* Title */
+.checkoutSection > h2{
+  color:#0c1f4b;
+  text-align:center;
+  font-family:'Exo',sans-serif;
+  font-size:clamp(1rem,1.5vw,1.1rem);
+  margin:.2rem 0 1rem;
+}
+
+/* Each subsection is a grid of 3 equal columns */
+.checkoutSection section{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:.7rem .9rem;
+  align-items:start;
+  margin-bottom:1.1rem;
+}
+
+/* Headings + divider span across the grid */
+.checkoutSection section > p{
+  grid-column:1 / -1;
+  margin:.1rem 0 0;
+  color:#18356b;
+  font-weight:700;
+  font-size:.9rem;
+}
+.checkoutSection section > hr{
+  grid-column:1 / -1;
+  height:1px;border:none;background:#d7e7fb;margin:.35rem 0 0.6rem;
+}
+
+/* Inputs: consistent look */
+.checkoutSection input[type="text"],
+.checkoutSection input[type="number"],
+.checkoutSection input[type="date"]{
+  width:100%; box-sizing:border-box;
+  background:#fff;
+  border:1px solid #c8dbf5;
+  color:#103166;
+  padding:.58rem .72rem;
+  border-radius:9px;
+  font-size:.92rem;
+  box-shadow:inset 0 1px 0 rgba(0,0,0,.03);
+  outline:none;
+  transition:border-color .12s ease, box-shadow .12s ease;
+}
+.checkoutSection input:focus{
+  border-color:#9ccfff; box-shadow:0 0 0 4px #6db9ff33;
+}
+
+/* ---------- Shipping section placement (is the FIRST section) ----------
+Order in your JSX:
+1) Name & Surname
+2) Email address
+3) Country
+4) Street/Apartment
+5) Shipping address
+Map to 3-col grid like the screenshot: 
+Row 1: [Email] [Country] [Name & Surname]
+Row 2: [Shipping address spans 2 cols] [Street/Apartment]
+*/
+.checkoutSection section:first-of-type input:nth-of-type(2){ grid-column:1; grid-row:1; } /* Email */
+.checkoutSection section:first-of-type input:nth-of-type(3){ grid-column:2; grid-row:1; } /* Country */
+.checkoutSection section:first-of-type input:nth-of-type(1){ grid-column:3; grid-row:1; } /* Name & Surname */
+.checkoutSection section:first-of-type input:nth-of-type(5){ grid-column:1 / span 2; grid-row:2; } /* Shipping address */
+.checkoutSection section:first-of-type input:nth-of-type(4){ grid-column:3; grid-row:2; } /* Street/Apartment */
+
+/* ---------- Payment section placement (is the LAST section) ----------
+Order in your JSX:
+1) Name on Card
+2) Valid through (date)
+3) Card Number
+4) CVV
+Map to:
+Row 1: [Name on Card] [—] [Valid through]
+Row 2: [Card Number spans 2 cols] [CVV]
+*/
+.checkoutSection section:last-of-type input:nth-of-type(1){ grid-column:1; grid-row:1; }      /* Name on Card */
+.checkoutSection section:last-of-type input:nth-of-type(2){ grid-column:3; grid-row:1; }      /* Valid through */
+.checkoutSection section:last-of-type input:nth-of-type(3){ grid-column:1 / span 2; grid-row:2; } /* Card Number */
+.checkoutSection section:last-of-type input:nth-of-type(4){ grid-column:3; grid-row:2; }      /* CVV */
+
+/* Optional “Proceed to payment” button inside checkout (if you add one) */
+.checkoutSection .primary{
+  justify-self:center;margin-top:.2rem;
+  padding:.66rem 1.2rem;border-radius:999px;border:none;cursor:pointer;
+  background:#cfeaff;color:#163869;font-weight:700;
+}
+
+/* ====== Breakpoints ====== */
+
+/* Tablet: 2 columns */
+@media (max-width: 900px){
+  .checkoutSection{ width:92vw; padding:1rem; }
+  .checkoutSection section{ grid-template-columns:repeat(2, 1fr); }
+
+  /* Shipping: Row 1 -> [Email][Country], Row 2 -> [Street][Name], Row 3 -> [Address spans 2] */
+  .checkoutSection section:first-of-type input:nth-of-type(2){ grid-column:1; grid-row:1; }
+  .checkoutSection section:first-of-type input:nth-of-type(3){ grid-column:2; grid-row:1; }
+  .checkoutSection section:first-of-type input:nth-of-type(4){ grid-column:1; grid-row:2; }
+  .checkoutSection section:first-of-type input:nth-of-type(1){ grid-column:2; grid-row:2; }
+  .checkoutSection section:first-of-type input:nth-of-type(5){ grid-column:1 / -1; grid-row:3; }
+
+  /* Payment: Row 1 -> [Name][Valid], Row 2 -> [Card spans 2], Row 3 -> [CVV right] */
+  .checkoutSection section:last-of-type input:nth-of-type(1){ grid-column:1; grid-row:1; }
+  .checkoutSection section:last-of-type input:nth-of-type(2){ grid-column:2; grid-row:1; }
+  .checkoutSection section:last-of-type input:nth-of-type(3){ grid-column:1 / -1; grid-row:2; }
+  .checkoutSection section:last-of-type input:nth-of-type(4){ grid-column:2; grid-row:3; justify-self:end; width:100%; }
+}
+
+/* Phone: single column */
+@media (max-width: 560px){
+  .checkoutSection section{ grid-template-columns:1fr; }
+  .checkoutSection section > p,
+  .checkoutSection section > hr{ grid-column:1; }
+  .checkoutSection section input{ grid-column:1 !important; grid-row:auto !important; }
+}
+
+/* ===== Responsive ===== */
+@media (max-width:1024px){
+  .cartSection,.checkoutSection{width:min(940px,94vw);}
+  .cartItem{grid-template-columns:100px 1fr;padding:.95rem 1rem;}
+  .productImage{width:90px;height:90px;border-radius:22px;}
+}
+
+@media (max-width:768px){
+  .cartSection,.checkoutSection{width:92vw;}
+  .cartItem{grid-template-columns:88px 1fr;gap:1rem;}
+  .checkoutSection section{grid-template-columns:repeat(2,1fr);}
+}
+
+@media (max-width:426px){
+  .backbutton{margin:1.1rem 0 .25rem;}
+  .cartItem{grid-template-columns:78px 1fr;padding:.8rem;gap:.8rem;}
+  .productImage{width:74px;height:74px;border-radius:18px;padding:.5rem;}
+  .deleteButton{padding:.34rem .6rem;font-size:.72rem;}
+  .quantityControl button,.quantityControl p{width:26px;height:26px;border-radius:8px;}
+  .checkoutSection{padding:1rem;}
+  .checkoutSection section{grid-template-columns:1fr;}
 }
