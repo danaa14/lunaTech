@@ -18,3 +18,10 @@
     font-family: 'oxanium', sans-serif;
     color: white;
 }
+
+.checkoutSection {
+  margin-top: 4rem;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+}

@@ -17,11 +17,10 @@ const Cart = () => {
     const stored = localStorage.getItem("cart");
     if (stored) {
       const parsedItems: ProductType[] = JSON.parse(stored);
-      const cartWithQuantities = parsedItems.map((item) => (
-        {
-          ...item,
-          quantity: 1,
-        }));
+      const cartWithQuantities = parsedItems.map((item) => ({
+        ...item,
+        quantity: 1,
+      }));
       setItems(cartWithQuantities);
       calculateTotal(cartWithQuantities);
     }
@@ -92,6 +91,29 @@ const Cart = () => {
             ))}
 
             <h2 className={styles.total}>Total: {total.toFixed(2)} €</h2>
+
+            <article className={styles.checkoutSection}>
+              <h2>Input your information and payment method</h2>
+
+              <section>
+                <p>Shipping details</p>
+                <hr />
+                <input type="text" placeholder="Name & Surname" />
+                <input type="text" placeholder="Email address" />
+                <input type="text" placeholder="Country" />
+                <input type="text" placeholder="Street/Apartment" />
+                <input type="text" placeholder="Shipping address" />
+              </section>
+
+              <section>
+                <p>Payment details</p>
+                <input type="text" placeholder="Name & Surname on Card" />
+                <input type="date" placeholder="Valid through" />
+                <input type="number" placeholder="Card Number" />
+                <input type="number" placeholder="CVV" />
+              </section>
+            </article>
+
           </>
         ) : (
           <p className={styles.empty}>Your cart is empty.</p>

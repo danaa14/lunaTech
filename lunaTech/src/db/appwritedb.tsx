@@ -1,4 +1,4 @@
-import { Client, Databases } from 'appwrite'
+import { Client, Databases, Query } from 'appwrite'
 
 
 const client = new Client();
@@ -8,7 +8,7 @@ export const databases:any = new Databases(client);
 
 export async function getCollections() {
     try{
-        const  productSnapshot = await databases.listDocuments('68e6a9cc000999e421ca', 'products');
+        const  productSnapshot = await databases.listDocuments('68e6a9cc000999e421ca', 'products', [Query.limit(100)]);
         const productList = productSnapshot.documents;
         const categorySnapshot = await databases.listDocuments('68e6a9cc000999e421ca', 'categories')
         const categoryList = categorySnapshot.documents;
