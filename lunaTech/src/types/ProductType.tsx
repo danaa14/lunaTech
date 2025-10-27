@@ -1,7 +1,7 @@
 export interface ProductType {
   $id: string;
   name: string;
-  price?: number;
+  price: number;
   image?: string;
   description?: string;
   category?: string;

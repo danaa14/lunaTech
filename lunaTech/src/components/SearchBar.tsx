@@ -42,7 +42,7 @@ const SearchBar = () => {
         <div className={styles.searchResults}>
           {filteredItems.length > 0 ? (
             filteredItems.map((item) => (
-                <Link to={`/productpage/${item.$id}`}><p key={item.$id}>{item.name}</p></Link>
+                <Link to={`/productpage/${item.$id}`} className={styles.link}><p key={item.$id}>{item.name}</p></Link>
             ))
           ) : (
             <p>No products found.</p>

@@ -15,7 +15,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 .img {
-    margin: 5rem;
+    margin: 5vh;
     
 }
 
@@ -33,5 +33,19 @@
     font-family: 'Exo', sans-serif;
     width: 100%;
     margin: 0;
+
+}
+
+.container p{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #0A1C26;
+    text-align: center;
+    font-family: 'Exo', sans-serif;
+    width: 100%;
+    margin-top: 2vh;
+}
+
+.link{
     text-decoration: none;
 }
