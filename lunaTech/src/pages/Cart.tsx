@@ -95,7 +95,7 @@ const Cart = () => {
             <article className={styles.checkoutSection}>
               <h2>Input your information and payment method</h2>
 
-              <section>
+              <section className={styles.checkoutInfo}>
                 <p>Shipping details</p>
                 <hr />
                 <input type="text" placeholder="Name & Surname" />
@@ -105,7 +105,7 @@ const Cart = () => {
                 <input type="text" placeholder="Shipping address" />
               </section>
 
-              <section>
+              <section className={styles.checkoutInfo}>
                 <p>Payment details</p>
                 <input type="text" placeholder="Name & Surname on Card" />
                 <input type="date" placeholder="Valid through" />

@@ -32,6 +32,10 @@
   margin:.3rem 0 1.4rem;
 }
 
+.productPrice {
+  font-family: 'exo', sans-serif;
+}
+
 /* ===== Wrapper ===== */
 .cartSection{width:min(1050px,92vw);margin:0 auto 3rem;}
 
@@ -101,6 +105,7 @@
 
 /* remove pill (right side) */
 .deleteButton{
+  font-family: 'exo', sans-serif;
   grid-area:remove;justify-self:end;
   border:none;background:var(--pill);color:#2e4777;
   font-size:.78rem;padding:.42rem .78rem;border-radius:999px;
@@ -117,6 +122,12 @@
   font-size:clamp(1.1rem,1.7vw,1.25rem);
 }
 /* ====== CHECKOUT — FIXED LAYOUT ====== */
+
+.checkoutInfo p {
+  font-size: 0.9rem;
+  font-family: "oxanium", sans-serif;
+}
+
 .checkoutSection{
   width:min(1050px,92vw);
   margin:0 auto 3.5rem;
